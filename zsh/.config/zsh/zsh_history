@@ -1,0 +1,47 @@
+vim .zshrc
+ssh angelo@angelo.xyz
+ssh-keygen
+ssh-copy-id angelo@angelo.xyz
+ssh angelo@angelo.xyz
+sudo /etc/hosts
+sudo vim /etc/hosts
+ssh xyz
+xx
+ cd /home/angelo
+ clear
+ cd /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411
+ cd /home/angelo
+ cd /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411
+ls
+sudo fdisk -l
+sudo chmod 666 /dev/sdd
+ cd /home/angelo
+sudo chmod 666 /dev/sdd1
+ cd /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411
+sudo chown angelo:angelo /dev/sdd
+sudo chown angelo:angelo /dev/sdd1
+ cd /home/angelo
+ cd /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411
+sudo chown -R angelo:angelo /dev/sdd1
+sudo chown -R angelo:angelo /dev/sdd
+ cd /home/angelo
+ cd /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411
+ cd /
+ cd /mnt
+ cd /mnt/stuff
+ cd /mnt
+ cd /
+ cd /media
+ cd /media/angelo
+ cd /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411
+sudo chown -R angelo:angelo /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411
+ cd /home/angelo
+ cd /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411
+ cd /home/angelo
+ cd /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411
+ cd /home/angelo
+ cd /home/angelo/Videos
+ cd /home/angelo/Videos/The.Man.In.The.High.Castle.S01.Season.1.1080p.5.1Ch.WebRip.ReEnc-DeeJayAhmed
+ cd /home/angelo/Videos
+ cd /home/angelo
+ cd /media/angelo/201d1711-222d-40a8-8f9e-8d81ff3cb411

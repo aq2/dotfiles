@@ -21,11 +21,13 @@ $gray
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1555953232,,"q"
+|2,0,1555959090,,"q"
+:w
+|2,0,1555959084,,"w"
+:bd
+|2,0,1555959066,,"bd"
 :wa
 |2,0,1555953120,,"wa"
-:w
-|2,0,1555952968,,"w"
 :wq
 |2,0,1555944872,,"wq"
 :MundoToggle
@@ -34,8 +36,6 @@ $gray
 |2,0,1555940047,,"Mundo"
 :bd!
 |2,0,1555870656,,"bd!"
-:bd
-|2,0,1555870624,,"bd"
 :nd
 |2,0,1555870348,,"nd"
 :d
@@ -122,6 +122,8 @@ $gray
 |2,0,1555515096,,"message bob"
 
 # Search String History (newest to oldest):
+?/pl
+|2,1,1555955467,47,"pl"
 ?/master
 |2,1,1555948454,47,"master"
 ?/*
@@ -220,8 +222,6 @@ $gray
 |2,1,1555085316,,"s:g0"
 ? s:gE
 |2,1,1555085294,,"s:gE"
-? s:gF
-|2,1,1555083987,,"s:gF"
 
 # Expression History (newest to oldest):
 
@@ -316,297 +316,228 @@ $gray
 |3,0,36,0,1,0,1555947846," "
 
 # File marks:
-'0  1  0  ~/vimwiki/boxen.wiki
-|4,48,1,0,1555953232,"~/vimwiki/boxen.wiki"
-'1  25  0  ~/vimwiki/boxen.wiki
-|4,49,25,0,1555953122,"~/vimwiki/boxen.wiki"
-'2  25  0  ~/vimwiki/boxen.wiki
-|4,50,25,0,1555953122,"~/vimwiki/boxen.wiki"
-'3  14  0  ~/.gitconfig
-|4,51,14,0,1555949922,"~/.gitconfig"
-'4  633  21  ~/.config/zsh/prompt_pure_setup
-|4,52,633,21,1555948463,"~/.config/zsh/prompt_pure_setup"
-'5  498  0  ~/.config/zsh/pure.zsh
-|4,53,498,0,1555948458,"~/.config/zsh/pure.zsh"
-'6  8  0  ~/.zshrc
-|4,54,8,0,1555947696,"~/.zshrc"
-'7  12  0  ~/.zshrc
-|4,55,12,0,1555947696,"~/.zshrc"
-'8  1  0  ~/dotfiles/vim/.vim/autocommands.vimrc
-|4,56,1,0,1555946519,"~/dotfiles/vim/.vim/autocommands.vimrc"
-'9  14  0  ~/.gitconfig
-|4,57,14,0,1555946139,"~/.gitconfig"
+'0  10  23  ~/vimwiki/colorscheme.wiki
+|4,48,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
+'1  220  0  ~/www/saghar/saghar.todo
+|4,49,220,0,1555958778,"~/www/saghar/saghar.todo"
+'2  11  0  ~/bin/old/z.sh
+|4,50,11,0,1555958439,"~/bin/old/z.sh"
+'3  4  32  ~/bin/toggler.sh
+|4,51,4,32,1555958418,"~/bin/toggler.sh"
+'4  1  0  ~/bin/toggler2.sh
+|4,52,1,0,1555958413,"~/bin/toggler2.sh"
+'5  1  0  ~/.ssh/id_rsa.pub
+|4,53,1,0,1555956661,"~/.ssh/id_rsa.pub"
+'6  1  0  ~/vimwiki/boxen.wiki
+|4,54,1,0,1555953232,"~/vimwiki/boxen.wiki"
+'7  1  0  ~/vimwiki/boxen.wiki
+|4,55,1,0,1555953232,"~/vimwiki/boxen.wiki"
+'8  29  0  ~/vimwiki/boxen.wiki
+|4,56,29,0,1555953122,"~/vimwiki/boxen.wiki"
+'9  29  0  ~/vimwiki/boxen.wiki
+|4,57,29,0,1555953122,"~/vimwiki/boxen.wiki"
 
 # Jumplist (newest first):
+-'  10  23  ~/vimwiki/colorscheme.wiki
+|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
+-'  14  2  ~/vimwiki/index.wiki
+|4,39,14,2,1555959087,"~/vimwiki/index.wiki"
+-'  3  2  ~/vimwiki/stuff.wiki
+|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
+-'  94  0  ~/vimwiki/figlet.wiki
+|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
+-'  15  15  ~/vimwiki/boxen.wiki
+|4,39,15,15,1555959086,"~/vimwiki/boxen.wiki"
+-'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
+|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
+-'  5  3  ~/vimwiki/peeps.wiki
+|4,39,5,3,1555959066,"~/vimwiki/peeps.wiki"
+-'  17  53  ~/vimwiki/saghar.wiki
+|4,39,17,53,1555959063,"~/vimwiki/saghar.wiki"
+-'  220  0  ~/www/saghar/saghar.todo
+|4,39,220,0,1555958778,"~/www/saghar/saghar.todo"
+-'  1  0  ~/www/saghar/saghar.todo
+|4,39,1,0,1555958766,"~/www/saghar/saghar.todo"
+-'  11  0  ~/bin/old/z.sh
+|4,39,11,0,1555958439,"~/bin/old/z.sh"
+-'  11  0  ~/bin/old/z.sh
+|4,39,11,0,1555958439,"~/bin/old/z.sh"
+-'  1  0  ~/bin/old/z.sh
+|4,39,1,0,1555958435,"~/bin/old/z.sh"
+-'  1  0  ~/bin/old/z.sh
+|4,39,1,0,1555958435,"~/bin/old/z.sh"
+-'  4  32  ~/bin/toggler.sh
+|4,39,4,32,1555958418,"~/bin/toggler.sh"
+-'  4  32  ~/bin/toggler.sh
+|4,39,4,32,1555958418,"~/bin/toggler.sh"
+-'  4  32  ~/bin/toggler.sh
+|4,39,4,32,1555958418,"~/bin/toggler.sh"
+-'  4  32  ~/bin/toggler.sh
+|4,39,4,32,1555958418,"~/bin/toggler.sh"
+-'  1  0  ~/bin/toggler2.sh
+|4,39,1,0,1555958413,"~/bin/toggler2.sh"
+-'  1  0  ~/bin/toggler2.sh
+|4,39,1,0,1555958413,"~/bin/toggler2.sh"
+-'  1  0  ~/bin/toggler2.sh
+|4,39,1,0,1555958413,"~/bin/toggler2.sh"
+-'  1  0  ~/bin/toggler2.sh
+|4,39,1,0,1555958413,"~/bin/toggler2.sh"
+-'  1  0  ~/bin/toggler.sh
+|4,39,1,0,1555958318,"~/bin/toggler.sh"
+-'  1  0  ~/bin/toggler.sh
+|4,39,1,0,1555958318,"~/bin/toggler.sh"
+-'  1  0  ~/bin/toggler.sh
+|4,39,1,0,1555958318,"~/bin/toggler.sh"
+-'  1  0  ~/bin/toggler.sh
+|4,39,1,0,1555958318,"~/bin/toggler.sh"
+-'  12  34  ~/vimwiki/index.wiki
+|4,39,12,34,1555956670,"~/vimwiki/index.wiki"
+-'  11  56  ~/vimwiki/index.wiki
+|4,39,11,56,1555956669,"~/vimwiki/index.wiki"
+-'  14  17  ~/vimwiki/boxen.wiki
+|4,39,14,17,1555956664,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  1  0  ~/.ssh/id_rsa.pub
+|4,39,1,0,1555956661,"~/.ssh/id_rsa.pub"
+-'  3  2  ~/vimwiki/index.wiki
+|4,39,3,2,1555954207,"~/vimwiki/index.wiki"
+-'  20  2  ~/vimwiki/index.wiki
+|4,39,20,2,1555954206,"~/vimwiki/index.wiki"
+-'  19  1  ~/vimwiki/index.wiki
+|4,39,19,1,1555954206,"~/vimwiki/index.wiki"
 -'  1  0  ~/vimwiki/boxen.wiki
 |4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  1  0  ~/vimwiki/boxen.wiki
+|4,39,1,0,1555953232,"~/vimwiki/boxen.wiki"
+-'  29  0  ~/vimwiki/boxen.wiki
+|4,39,29,0,1555953122,"~/vimwiki/boxen.wiki"
 -'  25  0  ~/vimwiki/boxen.wiki
 |4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
 -'  25  0  ~/vimwiki/boxen.wiki
 |4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
--'  21  12  ~/vimwiki/boxen.wiki
-|4,39,21,12,1555953102,"~/vimwiki/boxen.wiki"
--'  21  12  ~/vimwiki/boxen.wiki
-|4,39,21,12,1555953102,"~/vimwiki/boxen.wiki"
--'  3  6  ~/vimwiki/index.wiki
-|4,39,3,6,1555953071,"~/vimwiki/index.wiki"
--'  3  6  ~/vimwiki/index.wiki
-|4,39,3,6,1555953071,"~/vimwiki/index.wiki"
--'  9  0  ~/.zshrc
-|4,39,9,0,1555953068,"~/.zshrc"
--'  9  0  ~/.zshrc
-|4,39,9,0,1555953068,"~/.zshrc"
--'  76  7  ~/dotfiles/vim/.vim/keys.vimrc
-|4,39,76,7,1555953067,"~/dotfiles/vim/.vim/keys.vimrc"
--'  76  7  ~/dotfiles/vim/.vim/keys.vimrc
-|4,39,76,7,1555953067,"~/dotfiles/vim/.vim/keys.vimrc"
--'  13  42  ~/vimwiki/vim.wiki
-|4,39,13,42,1555953063,"~/vimwiki/vim.wiki"
--'  13  42  ~/vimwiki/vim.wiki
-|4,39,13,42,1555953063,"~/vimwiki/vim.wiki"
--'  23  12  ~/vimwiki/boxen.wiki
-|4,39,23,12,1555953061,"~/vimwiki/boxen.wiki"
--'  23  12  ~/vimwiki/boxen.wiki
-|4,39,23,12,1555953061,"~/vimwiki/boxen.wiki"
--'  13  2  ~/.vimrc
-|4,39,13,2,1555953060,"~/.vimrc"
--'  13  2  ~/.vimrc
-|4,39,13,2,1555953060,"~/.vimrc"
--'  77  1  ~/dotfiles/vim/.vim/keys.vimrc
-|4,39,77,1,1555953057,"~/dotfiles/vim/.vim/keys.vimrc"
--'  77  1  ~/dotfiles/vim/.vim/keys.vimrc
-|4,39,77,1,1555953057,"~/dotfiles/vim/.vim/keys.vimrc"
--'  72  8  ~/dotfiles/vim/.vim/keys.vimrc
-|4,39,72,8,1555952988,"~/dotfiles/vim/.vim/keys.vimrc"
--'  72  8  ~/dotfiles/vim/.vim/keys.vimrc
-|4,39,72,8,1555952988,"~/dotfiles/vim/.vim/keys.vimrc"
--'  22  19  ~/vimwiki/boxen.wiki
-|4,39,22,19,1555952981,"~/vimwiki/boxen.wiki"
--'  22  19  ~/vimwiki/boxen.wiki
-|4,39,22,19,1555952981,"~/vimwiki/boxen.wiki"
--'  1  0  ~/vimwiki/vim.wiki
-|4,39,1,0,1555952905,"~/vimwiki/vim.wiki"
--'  1  0  ~/vimwiki/vim.wiki
-|4,39,1,0,1555952905,"~/vimwiki/vim.wiki"
--'  8  0  ~/.zshrc
-|4,39,8,0,1555952881,"~/.zshrc"
--'  8  0  ~/.zshrc
-|4,39,8,0,1555952881,"~/.zshrc"
--'  14  0  ~/.zshrc
-|4,39,14,0,1555952878,"~/.zshrc"
--'  14  0  ~/.zshrc
-|4,39,14,0,1555952878,"~/.zshrc"
--'  14  0  ~/.gitconfig
-|4,39,14,0,1555949922,"~/.gitconfig"
--'  14  0  ~/.gitconfig
-|4,39,14,0,1555949922,"~/.gitconfig"
--'  633  21  ~/.config/zsh/prompt_pure_setup
-|4,39,633,21,1555948463,"~/.config/zsh/prompt_pure_setup"
--'  633  21  ~/.config/zsh/prompt_pure_setup
-|4,39,633,21,1555948463,"~/.config/zsh/prompt_pure_setup"
--'  633  21  ~/.config/zsh/prompt_pure_setup
-|4,39,633,21,1555948463,"~/.config/zsh/prompt_pure_setup"
--'  633  21  ~/.config/zsh/prompt_pure_setup
-|4,39,633,21,1555948463,"~/.config/zsh/prompt_pure_setup"
--'  498  0  ~/.config/zsh/pure.zsh
-|4,39,498,0,1555948458,"~/.config/zsh/pure.zsh"
--'  498  0  ~/.config/zsh/pure.zsh
-|4,39,498,0,1555948458,"~/.config/zsh/pure.zsh"
--'  498  0  ~/.config/zsh/pure.zsh
-|4,39,498,0,1555948458,"~/.config/zsh/pure.zsh"
--'  498  0  ~/.config/zsh/pure.zsh
-|4,39,498,0,1555948458,"~/.config/zsh/pure.zsh"
--'  415  45  ~/.config/zsh/pure.zsh
-|4,39,415,45,1555948386,"~/.config/zsh/pure.zsh"
--'  415  45  ~/.config/zsh/pure.zsh
-|4,39,415,45,1555948386,"~/.config/zsh/pure.zsh"
--'  415  45  ~/.config/zsh/pure.zsh
-|4,39,415,45,1555948386,"~/.config/zsh/pure.zsh"
--'  415  45  ~/.config/zsh/pure.zsh
-|4,39,415,45,1555948386,"~/.config/zsh/pure.zsh"
--'  327  43  ~/.config/zsh/pure.zsh
-|4,39,327,43,1555948381,"~/.config/zsh/pure.zsh"
--'  327  43  ~/.config/zsh/pure.zsh
-|4,39,327,43,1555948381,"~/.config/zsh/pure.zsh"
--'  327  43  ~/.config/zsh/pure.zsh
-|4,39,327,43,1555948381,"~/.config/zsh/pure.zsh"
--'  327  43  ~/.config/zsh/pure.zsh
-|4,39,327,43,1555948381,"~/.config/zsh/pure.zsh"
--'  290  30  ~/.config/zsh/pure.zsh
-|4,39,290,30,1555948377,"~/.config/zsh/pure.zsh"
--'  290  30  ~/.config/zsh/pure.zsh
-|4,39,290,30,1555948377,"~/.config/zsh/pure.zsh"
--'  290  30  ~/.config/zsh/pure.zsh
-|4,39,290,30,1555948377,"~/.config/zsh/pure.zsh"
--'  290  30  ~/.config/zsh/pure.zsh
-|4,39,290,30,1555948377,"~/.config/zsh/pure.zsh"
--'  238  22  ~/.config/zsh/pure.zsh
-|4,39,238,22,1555948375,"~/.config/zsh/pure.zsh"
--'  237  22  ~/.config/zsh/pure.zsh
-|4,39,237,22,1555948375,"~/.config/zsh/pure.zsh"
--'  235  19  ~/.config/zsh/pure.zsh
-|4,39,235,19,1555948375,"~/.config/zsh/pure.zsh"
--'  238  22  ~/.config/zsh/pure.zsh
-|4,39,238,22,1555948375,"~/.config/zsh/pure.zsh"
--'  237  22  ~/.config/zsh/pure.zsh
-|4,39,237,22,1555948375,"~/.config/zsh/pure.zsh"
--'  235  19  ~/.config/zsh/pure.zsh
-|4,39,235,19,1555948375,"~/.config/zsh/pure.zsh"
--'  238  22  ~/.config/zsh/pure.zsh
-|4,39,238,22,1555948375,"~/.config/zsh/pure.zsh"
--'  237  22  ~/.config/zsh/pure.zsh
-|4,39,237,22,1555948375,"~/.config/zsh/pure.zsh"
--'  235  19  ~/.config/zsh/pure.zsh
-|4,39,235,19,1555948375,"~/.config/zsh/pure.zsh"
--'  238  22  ~/.config/zsh/pure.zsh
-|4,39,238,22,1555948375,"~/.config/zsh/pure.zsh"
--'  237  22  ~/.config/zsh/pure.zsh
-|4,39,237,22,1555948375,"~/.config/zsh/pure.zsh"
--'  235  19  ~/.config/zsh/pure.zsh
-|4,39,235,19,1555948375,"~/.config/zsh/pure.zsh"
--'  233  19  ~/.config/zsh/pure.zsh
-|4,39,233,19,1555948374,"~/.config/zsh/pure.zsh"
--'  232  19  ~/.config/zsh/pure.zsh
-|4,39,232,19,1555948374,"~/.config/zsh/pure.zsh"
--'  233  19  ~/.config/zsh/pure.zsh
-|4,39,233,19,1555948374,"~/.config/zsh/pure.zsh"
--'  232  19  ~/.config/zsh/pure.zsh
-|4,39,232,19,1555948374,"~/.config/zsh/pure.zsh"
--'  233  19  ~/.config/zsh/pure.zsh
-|4,39,233,19,1555948374,"~/.config/zsh/pure.zsh"
--'  232  19  ~/.config/zsh/pure.zsh
-|4,39,232,19,1555948374,"~/.config/zsh/pure.zsh"
--'  233  19  ~/.config/zsh/pure.zsh
-|4,39,233,19,1555948374,"~/.config/zsh/pure.zsh"
--'  232  19  ~/.config/zsh/pure.zsh
-|4,39,232,19,1555948374,"~/.config/zsh/pure.zsh"
--'  220  3  ~/.config/zsh/pure.zsh
-|4,39,220,3,1555948362,"~/.config/zsh/pure.zsh"
--'  220  3  ~/.config/zsh/pure.zsh
-|4,39,220,3,1555948362,"~/.config/zsh/pure.zsh"
--'  220  3  ~/.config/zsh/pure.zsh
-|4,39,220,3,1555948362,"~/.config/zsh/pure.zsh"
--'  220  3  ~/.config/zsh/pure.zsh
-|4,39,220,3,1555948362,"~/.config/zsh/pure.zsh"
--'  219  21  ~/.config/zsh/pure.zsh
-|4,39,219,21,1555948360,"~/.config/zsh/pure.zsh"
--'  219  21  ~/.config/zsh/pure.zsh
-|4,39,219,21,1555948360,"~/.config/zsh/pure.zsh"
--'  219  21  ~/.config/zsh/pure.zsh
-|4,39,219,21,1555948360,"~/.config/zsh/pure.zsh"
--'  219  21  ~/.config/zsh/pure.zsh
-|4,39,219,21,1555948360,"~/.config/zsh/pure.zsh"
--'  185  1  ~/.config/zsh/pure.zsh
-|4,39,185,1,1555948358,"~/.config/zsh/pure.zsh"
--'  185  1  ~/.config/zsh/pure.zsh
-|4,39,185,1,1555948358,"~/.config/zsh/pure.zsh"
--'  185  1  ~/.config/zsh/pure.zsh
-|4,39,185,1,1555948358,"~/.config/zsh/pure.zsh"
--'  185  1  ~/.config/zsh/pure.zsh
-|4,39,185,1,1555948358,"~/.config/zsh/pure.zsh"
--'  1  0  ~/.config/zsh/pure.zsh
-|4,39,1,0,1555948291,"~/.config/zsh/pure.zsh"
--'  1  0  ~/.config/zsh/pure.zsh
-|4,39,1,0,1555948291,"~/.config/zsh/pure.zsh"
--'  1  0  ~/.config/zsh/pure.zsh
-|4,39,1,0,1555948291,"~/.config/zsh/pure.zsh"
--'  1  0  ~/.config/zsh/pure.zsh
-|4,39,1,0,1555948291,"~/.config/zsh/pure.zsh"
--'  1  0  ~/.config/zsh/prompt_pure_setup
-|4,39,1,0,1555948255,"~/.config/zsh/prompt_pure_setup"
--'  1  0  ~/.config/zsh/prompt_pure_setup
-|4,39,1,0,1555948255,"~/.config/zsh/prompt_pure_setup"
--'  1  0  ~/.config/zsh/prompt_pure_setup
-|4,39,1,0,1555948255,"~/.config/zsh/prompt_pure_setup"
--'  1  0  ~/.config/zsh/prompt_pure_setup
-|4,39,1,0,1555948255,"~/.config/zsh/prompt_pure_setup"
--'  11  20  ~/vimwiki/boxen.wiki
-|4,39,11,20,1555947981,"~/vimwiki/boxen.wiki"
--'  11  20  ~/vimwiki/boxen.wiki
-|4,39,11,20,1555947981,"~/vimwiki/boxen.wiki"
--'  7  6  ~/vimwiki/index.wiki
-|4,39,7,6,1555947944,"~/vimwiki/index.wiki"
--'  7  6  ~/vimwiki/index.wiki
-|4,39,7,6,1555947944,"~/vimwiki/index.wiki"
--'  20  0  ~/.zshrc
-|4,39,20,0,1555947919,"~/.zshrc"
--'  20  0  ~/.zshrc
-|4,39,20,0,1555947919,"~/.zshrc"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
+-'  25  0  ~/vimwiki/boxen.wiki
+|4,39,25,0,1555953122,"~/vimwiki/boxen.wiki"
 
 # History of marks within files (newest to oldest):
 
-> ~/vimwiki/boxen.wiki
-	*	1555953231	0
-	"	1	0
-	^	23	13
-	.	9	0
-	+	3	8
-	+	3	14
-	+	3	19
-	+	3	28
-	+	3	31
-	+	3	0
-	+	3	12
-	+	3	26
-	+	3	12
-	+	3	26
-	+	3	27
-	+	3	0
-	+	9	2
-	+	34	0
-	+	10	0
-	+	33	0
-	+	4	2
-	+	5	2
-	+	5	0
-	+	10	0
-	+	26	0
-	+	12	0
-	+	13	0
-	+	10	2
-	+	26	2
-	+	27	2
-	+	26	2
-	+	5	2
-	+	6	2
-	+	7	2
-	+	8	2
-	+	10	2
-	+	10	4
-	+	27	2
-	+	28	3
-	+	29	3
-	+	30	3
-	+	28	0
-	+	29	0
-	+	30	0
-	+	32	0
-	+	30	0
-	+	31	0
-	+	7	0
-	+	6	0
-	+	3	3
-	+	3	0
-	+	11	20
-	+	24	0
-	+	25	0
-	+	14	15
-	+	15	16
-	+	16	9
-	+	17	12
-	+	18	16
-	+	19	15
-	+	20	15
-	+	21	13
-	+	22	15
-	+	23	12
-	+	22	20
-	+	10	0
-	+	9	0
-
 > ~/vimwiki/index.wiki
-	*	1555953069	0
-	"	3	6
+	*	1555959087	0
+	"	14	2
 	^	4	34
 	.	4	0
 	+	21	17
@@ -654,6 +585,260 @@ $gray
 	+	11	0
 	+	5	0
 	+	4	0
+
+> ~/vimwiki/colorscheme.wiki
+	*	1555959087	0
+	"	10	23
+	^	10	24
+	.	10	23
+	+	54	0
+	+	43	0
+	+	44	22
+	+	45	0
+	+	46	12
+	+	47	13
+	+	48	39
+	+	49	18
+	+	50	12
+	+	51	10
+	+	52	26
+	+	53	0
+	+	54	0
+	+	55	0
+	+	56	0
+	+	59	3
+	+	60	3
+	+	61	3
+	+	62	3
+	+	63	3
+	+	64	4
+	+	64	3
+	+	65	0
+	+	56	0
+	+	65	0
+	+	56	0
+	+	65	0
+	+	56	19
+	+	65	0
+	+	56	38
+	+	65	0
+	+	56	42
+	+	56	0
+	+	65	0
+	+	56	0
+	+	65	0
+	+	59	11
+	+	61	12
+	+	62	0
+	+	59	0
+	+	63	0
+	+	64	15
+	+	64	13
+	+	65	10
+	+	65	0
+	+	54	0
+	+	63	0
+	+	62	0
+	+	61	0
+	+	60	0
+	+	58	0
+	+	67	0
+	+	68	83
+	+	69	0
+	+	66	0
+	+	58	6
+	+	66	0
+	+	58	7
+	+	66	0
+	+	58	0
+	+	59	0
+	+	58	0
+	+	70	0
+	+	71	0
+	+	70	13
+	+	66	0
+	+	59	26
+	+	59	17
+	+	66	0
+	+	60	0
+	+	71	0
+	+	71	2
+	+	81	48
+	+	71	0
+	+	19	0
+	+	83	21
+	+	83	25
+	+	83	49
+	+	83	75
+	+	83	18
+	+	83	0
+	+	83	16
+	+	83	33
+	+	83	0
+	+	3	0
+	+	12	0
+	+	13	0
+	+	3	9
+	+	8	0
+	+	11	0
+	+	9	25
+	+	10	23
+
+> ~/vimwiki/stuff.wiki
+	*	1555959086	0
+	"	3	2
+	^	3	2
+	.	3	0
+	+	3	8
+	+	4	2
+	+	3	0
+
+> ~/vimwiki/figlet.wiki
+	*	1555959086	0
+	"	94	0
+	.	86	0
+	+	90	0
+	+	89	0
+	+	88	0
+	+	86	0
+
+> ~/vimwiki/boxen.wiki
+	*	1555959086	0
+	"	15	15
+	^	14	18
+	.	10	0
+	+	3	8
+	+	3	14
+	+	3	19
+	+	3	28
+	+	3	31
+	+	3	0
+	+	3	12
+	+	3	26
+	+	3	12
+	+	3	26
+	+	3	27
+	+	3	0
+	+	9	2
+	+	38	0
+	+	10	0
+	+	37	0
+	+	4	2
+	+	5	2
+	+	5	0
+	+	10	0
+	+	30	0
+	+	16	0
+	+	17	0
+	+	10	2
+	+	30	2
+	+	31	2
+	+	30	2
+	+	5	2
+	+	6	2
+	+	7	2
+	+	8	2
+	+	10	2
+	+	10	4
+	+	31	2
+	+	32	3
+	+	33	3
+	+	34	3
+	+	32	0
+	+	33	0
+	+	34	0
+	+	36	0
+	+	34	0
+	+	35	0
+	+	7	0
+	+	6	0
+	+	3	3
+	+	3	0
+	+	15	20
+	+	28	0
+	+	29	0
+	+	18	15
+	+	19	16
+	+	20	9
+	+	21	12
+	+	22	16
+	+	23	15
+	+	24	15
+	+	25	13
+	+	26	15
+	+	27	12
+	+	26	20
+	+	10	0
+	+	9	0
+	+	11	0
+	+	10	0
+	+	12	15
+	+	13	13
+	+	14	0
+	+	10	0
+
+> ~/dotfiles/vim/.vim/plug.vimrc
+	*	1555959086	0
+	"	10	1
+
+> ~/vimwiki/peeps.wiki
+	*	1555959064	0
+	"	5	3
+	^	5	2
+	.	7	0
+	+	3	0
+	+	4	0
+	+	6	0
+	+	3	0
+	+	4	2
+	+	5	0
+	+	7	0
+
+> ~/vimwiki/saghar.wiki
+	*	1555959061	0
+	"	17	53
+	^	17	54
+	.	17	22
+	+	3	0
+	+	2	0
+	+	9	100
+	+	10	31
+	+	11	50
+	+	12	61
+	+	10	41
+	+	9	100
+	+	10	0
+	+	13	0
+	+	14	4
+	+	15	57
+	+	16	0
+	+	17	22
+
+> ~/www/saghar/saghar.todo
+	*	1555958775	0
+	"	220	0
+
+> ~/bin/old/z.sh
+	*	1555958438	0
+	"	11	0
+
+> ~/bin/toggler.sh
+	*	1555958415	0
+	"	4	32
+
+> ~/bin/toggler2.sh
+	*	1555958413	0
+	"	1	0
+
+> ~/.ssh/id_rsa.pub
+	*	1555956659	0
+	"	1	0
+
+> ~/NERD_tree_1
+	*	1555955469	0
+	"	16	0
+	.	1	0
+	+	1	0
 
 > ~/.zshrc
 	*	1555953068	0
@@ -767,12 +952,6 @@ $gray
 	+	23	16
 	+	5	2
 	+	5	0
-
-> ~/NERD_tree_1
-	*	1555952949	0
-	"	11	0
-	.	1	0
-	+	1	0
 
 > ~/.gitconfig
 	*	1555949920	0
@@ -1394,24 +1573,6 @@ $gray
 	+	41	43
 	+	29	0
 
-> ~/vimwiki/figlet.wiki
-	*	1555868148	0
-	"	4	8
-	.	86	0
-	+	90	0
-	+	89	0
-	+	88	0
-	+	86	0
-
-> ~/vimwiki/stuff.wiki
-	*	1555868145	0
-	"	3	1
-	^	3	2
-	.	3	0
-	+	3	8
-	+	4	2
-	+	3	0
-
 > ~/dotfiles/vim/colors/gravy.vim
 	*	1555867024	0
 	"	100	20
@@ -1632,19 +1793,6 @@ $gray
 	+	200	0
 	+	101	0
 
-> ~/vimwiki/peeps.wiki
-	*	1555866631	0
-	"	6	0
-	^	5	2
-	.	7	0
-	+	3	0
-	+	4	0
-	+	6	0
-	+	3	0
-	+	4	2
-	+	5	0
-	+	7	0
-
 > ~/dotfiles/vim/NERD_tree_1
 	*	1555857383	0
 	"	3	0
@@ -1736,103 +1884,6 @@ $gray
 	*	1555850191	0
 	"	7227	3
 
-> ~/vimwiki/colorscheme.wiki
-	*	1555850102	0
-	"	2	0
-	^	9	26
-	.	9	25
-	+	53	0
-	+	42	0
-	+	43	22
-	+	44	0
-	+	45	12
-	+	46	13
-	+	47	39
-	+	48	18
-	+	49	12
-	+	50	10
-	+	51	26
-	+	52	0
-	+	53	0
-	+	54	0
-	+	55	0
-	+	58	3
-	+	59	3
-	+	60	3
-	+	61	3
-	+	62	3
-	+	63	4
-	+	63	3
-	+	64	0
-	+	55	0
-	+	64	0
-	+	55	0
-	+	64	0
-	+	55	19
-	+	64	0
-	+	55	38
-	+	64	0
-	+	55	42
-	+	55	0
-	+	64	0
-	+	55	0
-	+	64	0
-	+	58	11
-	+	60	12
-	+	61	0
-	+	58	0
-	+	62	0
-	+	63	15
-	+	63	13
-	+	64	10
-	+	64	0
-	+	53	0
-	+	62	0
-	+	61	0
-	+	60	0
-	+	59	0
-	+	57	0
-	+	66	0
-	+	67	83
-	+	68	0
-	+	65	0
-	+	57	6
-	+	65	0
-	+	57	7
-	+	65	0
-	+	57	0
-	+	58	0
-	+	57	0
-	+	69	0
-	+	70	0
-	+	69	13
-	+	65	0
-	+	58	26
-	+	58	17
-	+	65	0
-	+	59	0
-	+	70	0
-	+	70	2
-	+	80	48
-	+	70	0
-	+	18	0
-	+	82	21
-	+	82	25
-	+	82	49
-	+	82	75
-	+	82	18
-	+	82	0
-	+	82	16
-	+	82	33
-	+	82	0
-	+	3	0
-	+	11	0
-	+	12	0
-	+	3	9
-	+	8	0
-	+	10	0
-	+	9	25
-
 > ~/vimwiki/drip.wiki
 	*	1555849414	0
 	"	3	9
@@ -1866,24 +1917,6 @@ $gray
 	+	19	0
 	+	20	0
 	+	5	0
-
-> ~/vimwiki/saghar.wiki
-	*	1555848847	0
-	"	15	57
-	^	15	58
-	.	15	57
-	+	3	0
-	+	2	0
-	+	9	100
-	+	10	31
-	+	11	50
-	+	12	61
-	+	10	41
-	+	9	100
-	+	10	0
-	+	13	0
-	+	14	4
-	+	15	57
 
 > ~/vimwiki/ros.wiki
 	*	1555848696	0
@@ -2524,64 +2557,3 @@ $gray
 	+	22	0
 	+	21	0
 	+	22	16
-
-> /usr/share/vim/vim80/doc/spell.txt
-	*	1555424606	0
-	"	53	0
-
-> ~/vimwiki/terminator.wiki
-	*	1555424493	0
-	"	20	20
-	^	20	21
-	.	20	0
-	+	3	15
-	+	4	0
-	+	5	18
-	+	6	19
-	+	5	5
-	+	6	22
-	+	7	28
-	+	8	14
-	+	7	8
-	+	6	8
-	+	5	6
-	+	8	14
-	+	9	15
-	+	10	24
-	+	9	7
-	+	8	7
-	+	7	9
-	+	6	9
-	+	5	7
-	+	11	19
-	+	12	18
-	+	13	19
-	+	14	17
-	+	21	0
-	+	22	0
-	+	21	6
-	+	21	5
-	+	22	0
-	+	21	0
-	+	22	0
-	+	15	0
-	+	20	0
-
-> ~/old-notes/zsh old/aq.zsh-theme
-	*	1555423885	0
-	"	5	0
-
-> ~/old-notes/zsh old/zsh.txt
-	*	1555423882	0
-	"	8	0
-
-> ~/dotfiles/vim/Highlight test
-	*	1555348699	0
-	"	362	0
-	^	551	22
-	.	48	0
-	+	48	0
-
-> ~/vimwiki/colours.wiki
-	*	1555348243	0
-	"	2	0
