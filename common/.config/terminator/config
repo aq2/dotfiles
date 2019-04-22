@@ -1,0 +1,68 @@
+[global_config]
+  always_split_with_profile = True
+  enabled_plugins = ,
+  inactive_color_offset = 0.95
+  title_font = Ubuntu Mono 12
+  title_hide_sizetext = True
+  title_inactive_bg_color = "#2e3436"
+  title_transmit_bg_color = "#555753"
+  title_use_system_font = False
+[keybindings]
+  close_term = <Primary>w
+  cycle_next = <Shift>Right
+  cycle_prev = <Shift>Left
+  insert_number = <Super>9
+  split_horiz = <Super>grave
+  split_vert = <Super>2
+  toggle_zoom = <Super>1
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+  [[New Layout 1]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 255d9adc-eded-4477-a469-13b2f7881832
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 1366, 768
+      title = ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 683
+      ratio = 0.5
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 255d9adc-eded-4477-a469-13b2f7881832
+    [[[terminal3]]]
+      order = 1
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = d72d6134-9a1c-4ca5-aa28-fbdad981869c
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    background_darkness = 0.81
+    background_type = transparent
+    cursor_color = "#e9b96e"
+    cursor_color_fg = False
+    font = FantasqueSansMono Nerd Font Mono 16
+    foreground_color = "#839496"
+    palette = "#fbf1c7:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#7c6f64:#928374:#9d0006:#79740e:#b57614:#076678:#8f3f71:#427b58:#3c3836"
+    scrollbar_position = hidden
+    use_system_font = False

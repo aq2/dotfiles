@@ -1,0 +1,21 @@
+[user]
+  name = angelo
+	email = angelo@fluxton.co.uk
+
+[color]
+  ui = true
+
+[color "decorate"]
+  head = bold white
+  branch = bold magenta
+  remotebranch = blue
+  tag = bold red
+
+[core]
+	excludesfile = /home/angelo/dotfiles/gitignore-global
+
+[push]
+  default = simple
+
+[status]
+  showUntrackedFiles = all

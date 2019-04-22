@@ -1,0 +1,373 @@
+".....  Plug
+  set nocompatible
+  if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
+
+  call plug#begin('~/.vim/plugged')
+    Plug 'airblade/vim-gitgutter'
+    Plug 'ap/vim-css-color'
+    Plug 'blueyed/vim-diminactive'
+    Plug 'digitaltoad/vim-pug'
+    Plug 'hail2u/vim-css3-syntax'
+    Plug 'iloginow/vim-stylus'
+    Plug 'itchyny/lightline.vim'
+    Plug 'itchyny/vim-gitbranch'
+    Plug 'joeytwiddle/sexy_scroller.vim'
+    Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
+    Plug 'junegunn/fzf', { 'dir': '~/.config/fzf', 'do': './install --all' }
+    Plug 'mattn/emmet-vim'
+    Plug 'mattn/calendar-vim'
+    Plug 'maxboisvert/vim-simple-complete'
+    Plug 'mgee/lightline-bufferline'
+    Plug 'mhinz/vim-startify'
+    Plug 'pangloss/vim-javascript'
+    Plug 'scrooloose/nerdtree'
+    Plug 'storyn26383/vim-vue'
+    Plug 'tpope/vim-commentary'
+    Plug 'vimwiki/vimwiki'
+    Plug 'Yggdroot/indentLine'
+  call plug#end()
+
+
+"  𐇔 𐇒 𐇛 𐇡 𐇯 👢 💀 💩 📡 🔒 🕺 🛵 🚷 ☠ 🤠   🤡 🤷
+"                                    省 祉 祈 廒 ﮬ ﰌ ﱘ ﲵ
+
+"_______   general settings
+
+  if has('gui_running')
+    set go=af ghr=0
+    set linespace=2
+    " set lines=30 columns=120
+    set guifont=FantasqueSansMono\ Nerd\ Font\ Mono\ 16
+    set mousehide mousemodel=popup
+    nnoremap <A-m> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+    nnoremap <A-s> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
+  endif
+
+  syntax on
+  set mouse=a
+  colo seagr-aq
+  set backspace=2
+  set encoding=utf-8
+  filetype plugin on
+  set hidden autoread
+  set background=dark
+  set fillchars=vert:\ 
+  set virtualedit=block
+  set ttyfast termguicolors
+  set splitbelow splitright
+  set rnu number numberwidth=5
+  set updatetime=100 ttimeoutlen=50
+  set clipboard^=unnamed,unnamedplus
+  set laststatus=2 showcmd noshowmode
+  set cursorline scrolloff=9 nostartofline
+  set list listchars=tab:‥\ ,trail:˙,nbsp:␣
+  set foldmethod=indent foldenable foldlevelstart=1
+
+  set linebreak
+  let &showbreak='⤷ '
+  set autoindent copyindent
+  filetype plugin indent on
+  set wrap whichwrap+=<,>,[,]
+  set shiftround shiftwidth=2
+  set tabstop=2 expandtab softtabstop=2
+
+  set path+=**
+  set gdefault
+  set showmatch
+  set ignorecase hlsearch incsearch
+  set wildmenu wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*/Music/*,*/Pictures/*
+
+  " restore cursor position upon reopening files
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+  let g:netrw_banner = 0
+  let g:netrw_winsize = 25
+  let g:netrw_liststyle = 3
+
+
+"---   backup/undo
+  if exists('$SUDO_USER')         " don't create root-owned files
+    set viminfo=
+    set nobackup nowritebackup noswapfile noundofile
+  else                            " keep files out of the way
+    set viminfo+=n~/.vim/tmp/viminfo
+    set backup backupdir=~/.vim/tmp/backup//
+    set directory=~/.vim/tmp/swap// directory+=.
+    set undofile undodir=~/.vim/tmp/undo undodir+=.
+
+    if !empty(glob('~/.vim/tmp/viminfo'))
+      if !filereadable(expand('~/.vim/tmp/viminfo'))
+        echoerr 'warning: ~/.vim/tmp/viminfo exists but is not readable'
+      endif
+    endif
+  endif
+
+
+" ________  keyboard mapping
+  " Quickly edit/reload the vimrc file
+  nmap <silent> <leader>ev :e $MYVIMRC<CR>
+  nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+  " lazy man's colon
+  nnoremap ; :
+
+  " Tab switches windows and sets pwd
+  map <Tab> <C-W>W:cd %:p:h<CR>:<CR>
+
+  " scroll wrapped lines naturally
+  nnoremap j gj
+  nnoremap k gk
+
+  " quick entry/exit into insert mode
+  imap jj <Esc>
+  nnoremap <Space> i
+  nnoremap <Del> i<Del>
+
+  " Bubble single lines
+  nmap <S-Up> ddkP
+  imap <S-Up> <ESC>ddkPi
+  nmap <S-Down> ddp
+  imap <S-Down> <ESC>ddpi
+  " Bubble multiple lines
+  vmap <S-Up> xkP`[V`]
+  vmap <S-Down> xp`[V`]
+  imap <S-Up> <ESC>xkP`[V`]i
+  imap <S-Down> <ESC>xp`[V`]
+
+  " mark/unmark line  \l marks line, 'l returns to marked line, :match to clear
+  nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
+  " \p = permanent marker
+  nnoremap <silent> <Leader>p :exe "let m = matchadd('WildMenu','\\%" . line('.') . "l')"<CR>
+  " \q clears all, perms and temps
+  nnoremap <silent> <Leader>q :call clearmatches()<CR>
+
+  " w!! let's you sudo save a file
+  cmap w!! w !sudo tee % >/dev/null
+
+  " remap arrow keys to scroll buffers
+  nnoremap <S-Left> :bprev<CR>
+  nnoremap <S-Right> :bnext<CR>
+
+  map <Leader>n :NERDTreeToggle<CR>
+  map <Leader>g :Goyo<CR>
+  map <Leader>m :Limelight!!<CR>
+  map <Leader>h :nohl<CR>
+  map <silent> <Leader>st :Startify<CR>
+
+  " TODO fucked
+  nmap <Leader># <Plug>Commentary
+
+  imap -> <C-k>->
+  imap -= <C-k>-> 
+  imap => <C-k>=>
+  imap meh 🤷
+  imap :) 
+  imap *** *         *           *           *           *
+
+
+  cmap Q q<CR>
+  map <F1> <Esc>
+  imap <F1> <Esc>
+  cmap waq wqa<CR>
+
+  command! Bigger  let &guifont = substitute(&guifont, '\d\+', '\=submatch(0)+1', '')
+  command! Smaller let &guifont = substitute(&guifont, '\d\+', '\=submatch(0)-1', '')
+
+  " .... old habits die hard
+  inoremap <C-v> <ESC>"+pa
+  vnoremap <C-c> "+y
+  vnoremap <C-d> "+d
+
+  nnoremap <Leader>f :FZF<CR>
+  nnoremap <Leader>! :FZF!<CR>
+  nnoremap <Leader>~ :FZF ~<CR>
+
+  nnoremap <Leader>i :IndentLinesToggle<CR>
+
+
+"... zoom/restore window.
+  function! s:ZoomToggle() abort
+    if exists('t:zoomed') && t:zoomed
+      execute t:zoom_winrestcmd
+      let t:zoomed = 0
+    else
+      let t:zoom_winrestcmd = winrestcmd()
+      resize
+      vertical resize
+      let t:zoomed = 1
+    endif
+  endfunction
+
+  command! ZoomToggle call s:ZoomToggle()
+  nnoremap <silent> <C-A> :ZoomToggle<CR>
+
+
+"... make folds a wee bit more interesting
+  function! MyFoldText()
+    let foldsize = (v:foldend-v:foldstart)
+    return '👙 '.getline(v:foldstart).'          ('.foldsize.' lines)              '. repeat('∘   ', 29)
+    " return '▾  '.getline(v:foldstart).'          ('.foldsize.' lines)              '. repeat('∘   ', 29)
+  endfunction
+  set foldtext=MyFoldText()
+
+
+"....     meniscus
+  let g:vimwiki_folding='syntax'
+  let g:vimwiki_hl_cb_checked = 1
+  let g:vimwiki_listsyms = ' ⬦⬥⬨⬧'
+  nmap <Leader>wn <Plug>VimwikiNextLink
+
+  hi StartifyPath guifg=#227722
+  let g:startify_files_number = 5
+  let g:startify_enable_special = 0
+  autocmd User Startified setlocal cursorline
+  " let g:startify_bookmarks = [{'v':'~/.vimrc'}]
+  let g:startify_custom_header = map(startify#fortune#boxed(), '"    ".v:val')
+
+  let g:user_emmet_install_global = 0
+  autocmd FileType html,css EmmetInstall
+  " let g:user_emmet_leader_key='<C-M>'
+
+  let g:SexyScroller_MaxTime = 200
+  let g:SexyScroller_EasingStyle = 2
+
+
+"... Goyo and limelight
+  let g:goyo=0
+  let goyo_width=110
+  let goyo_height=95
+  let g:limelight_paragraph_span = 2
+
+  function! s:goyo_enter()
+    let g:goyo = 1
+    set showtabline=0
+  endfunction
+
+  function! s:goyo_leave()
+    let g:goyo = 0
+    hi iCursor guifg=red guibg=yellow
+  endfunction
+
+  autocmd! User GoyoLeave nested call <SID>goyo_leave()
+  autocmd! User GoyoEnter nested call <SID>goyo_enter()
+
+
+" ____________________________lightline
+  let g:lightline = {
+      \ 'colorscheme': 'materia',
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' },
+      \ 'active': {
+      \   'left': [['mode', 'paste'], ['gitbranch'], ['buffers']] ,
+      \   'right': [['filetype', 'percent', 'lineinfo']]
+      \ },
+      \ 'inactive': {},
+  \ }
+
+  " let g:lightline#bufferline#modified  = ''
+  let g:lightline#bufferline#modified  = '😱 '
+  let g:lightline#bufferline#read_only  = '🔒 '
+  let g:lightline#bufferline#show_number  = 0    " if 2, show nums from 1
+  let g:lightline.component_type   = {'buffers': 'tabsel'}
+  let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+  let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+
+  function! LightlineUpdateAQ()
+    if g:goyo==0
+      call lightline#update()
+    endif
+  endfunction
+
+  au BufWritePost,TextChanged,TextChangedI * call LightlineUpdateAQ()
+
+  nmap <Leader>1 <Plug>lightline#bufferline#go(1)
+  nmap <Leader>2 <Plug>lightline#bufferline#go(2)
+  nmap <Leader>3 <Plug>lightline#bufferline#go(3)
+  nmap <Leader>4 <Plug>lightline#bufferline#go(4)
+  nmap <Leader>5 <Plug>lightline#bufferline#go(5)
+  nmap <Leader>6 <Plug>lightline#bufferline#go(6)
+  nmap <Leader>7 <Plug>lightline#bufferline#go(7)
+  nmap <Leader>8 <Plug>lightline#bufferline#go(8)
+  nmap <Leader>9 <Plug>lightline#bufferline#go(9)
+  nmap <Leader>0 <Plug>lightline#bufferline#go(10)
+
+
+" NERDTree File highlighting
+  function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+  exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+  exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+  endfunction
+
+  call NERDTreeHighlightFile('vue', 'green', 'none', 'green', 'NONE')
+  call NERDTreeHighlightFile('ini', 'yellow', 'none', '#771199', 'NONE')
+  call NERDTreeHighlightFile('md', 'blue', 'none', '#3366aa', 'NONE')
+  call NERDTreeHighlightFile('html', 'yellow', 'none', '#994499', 'NONE')
+  call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', 'NONE')
+  call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', 'NONE')
+
+  " . . .  dunno if worx?
+  function! s:attempt_select_last_file()
+    let l:previous=expand('#:t')
+    if l:previous != ''
+      call search('\v<' . l:previous . '>')
+    endif
+  endfunction
+
+  augroup NERDTree
+    autocmd!
+    autocmd User NERDTreeInit call s:attempt_select_last_file()
+  augroup END
+
+  autocmd User NERDTreeInit call s:attempt_select_last_file()
+
+  " Move up a directory using "-" like vim-vinegar (usually "u" does this).
+  nmap <buffer> <expr> - g:NERDTreeMapUpdir
+  " Like vim-vinegar.
+  nnoremap <silent> - :silent edit <C-R>=empty(expand('%')) ? '.' : expand('%:p:h')<CR><CR>
+
+  augroup nerdtreehidecwd           " remoe slashes from NERDTree
+    autocmd!
+    autocmd FileType nerdtree setlocal conceallevel=3 | syntax match NERDTreeDirSlash #/$# containedin=NERDTreeDir conceal contained
+  augroup end
+
+  let NERDTreeMinimalUI=1
+  let NERDTreeQuitOnOpen=1
+  let NERDTreeShowBookmarks=1
+  let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
+
+
+  let g:indentLine_bgcolor_gui = '#1d2428'
+  let g:indentLine_char = '⁚'
+  let g:indentLine_enabled = 0
+
+
+"  ....   syntax stuff  
+  map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+  \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+  \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+
+  nmap <leader>sp :call <SID>SynStack()<CR>
+  function! <SID>SynStack()
+    if !exists("*synstack")
+      return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  endfunc
+
+  " autocmd VimEnter *
+  "    \   if !argc()
+  "    \ |   Startify
+  "    \ |   NERDTree
+  "    \ |   wincmd w
+  "    \ | endif
+

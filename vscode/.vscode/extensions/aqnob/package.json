@@ -1,0 +1,22 @@
+{
+    "name": "aqnob",
+    "displayName": "AQnob",
+    "description": "my lervely theme",
+    "version": "0.0.1",
+    "publisher": "aq",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "AQnob",
+                "uiTheme": "vs-dark",
+                "path": "./themes/AQnob-color-theme.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+	"tokenColors": "./AQnob.tmTheme",
+	"colors": {
+		"editor.background": "#1A1D23",
+		"editorCursor.foreground": "#AAAA3B",
+		"editor.foreground": "#FF5370",
+		"editorWhitespace.foreground": "#2F343F",
+		"editor.lineHighlightBackground": "#22263ABD",
+		"editor.selectionBackground": "#22263ABD"
+	},
+	"name": "AQnob"
+}
