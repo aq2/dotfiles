@@ -43,7 +43,7 @@
   set directory=~/.vim/tmp/swap// directory+=.
   set undofile undodir=~/.vim/tmp/undo undodir+=.
 
-  " let NERDTreeBookmarksFile=expand("$HOME/.vim/tmp/NERDTreeBookmarks")
+  let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
 
 
 "  gvim settings

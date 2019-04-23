@@ -56,6 +56,7 @@
   let MRU_Add_Menu = 0
   let MRU_Window_Height = 15
   let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'
+  let MRU_File = '~/.vim/vim_mru_files'
 
   let g:user_emmet_install_global = 0
   " let g:user_emmet_leader_key='<C-M>'

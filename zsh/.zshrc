@@ -12,10 +12,12 @@ fpath=( "$HOME/.config/zsh" $fpath )
 autoload -U promptinit;promptinit
 prompt pure
 
-PURE_GIT_UP_ARROW=\ 
-# PURE_PROMPT_SYMBOL=➜ \ ➤\ ❯\ 💲\ 🞂\ »
+# ⇡ ⇣ 
+ 
+PURE_GIT_UP_ARROW=⇡ \ 
+# PURE_PROMPT_SYMBOL=➜ \ ➤ \ ❯ \ 💲\ 🞂 \ »
 PURE_PROMPT_SYMBOL=»
-PURE_GIT_DOWN_ARROW=\ 
+PURE_GIT_DOWN_ARROW=⇣ \ 
 
 setopt prompt_subst
 prompt_newline='%666v'
