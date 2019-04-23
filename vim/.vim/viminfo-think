@@ -20,10 +20,10 @@
 $gray
 
 # Command Line History (newest to oldest):
-:wq
-|2,0,1555982159,,"wq"
 :q
-|2,0,1555981996,,"q"
+|2,0,1555983267,,"q"
+:wq
+|2,0,1555982993,,"wq"
 :w
 |2,0,1555959084,,"w"
 :bd
@@ -272,32 +272,32 @@ $gray
 	  imap <- <C-k><-
 |3,0,0,1,1,0,1555953021,"  imap <- <C-k><-"
 ""1	LINE	0
-	    * [ ] have to manually push/pull 'sync'
-|3,1,1,1,1,0,1555953092,"    * [ ] have to manually push/pull 'sync'"
+	git remote add origin git@github.com:aq2/bin.git
+|3,1,1,1,1,0,1555982882,"git remote add origin git@github.com:aq2/bin.git"
 "2	LINE	0
-	    * [ ] yadm available from distro repo
-|3,0,2,1,1,0,1555953091,"    * [ ] yadm available from distro repo"
+	    * [ ] have to manually push/pull 'sync'
+|3,0,2,1,1,0,1555953092,"    * [ ] have to manually push/pull 'sync'"
 "3	LINE	0
-	    * [ ] all in one git repo
-|3,0,3,1,1,0,1555953090,"    * [ ] all in one git repo"
+	    * [ ] yadm available from distro repo
+|3,0,3,1,1,0,1555953091,"    * [ ] yadm available from distro repo"
 "4	LINE	0
-	    * [ ] can lighten nextcloud's load - less confusion over file locations?
-|3,0,4,1,1,0,1555953088,"    * [ ] can lighten nextcloud's load - less confusion over file locations?"
+	    * [ ] all in one git repo
+|3,0,4,1,1,0,1555953090,"    * [ ] all in one git repo"
 "5	LINE	0
-	fi
-|3,0,5,1,1,0,1555947849,"fi"
+	    * [ ] can lighten nextcloud's load - less confusion over file locations?
+|3,0,5,1,1,0,1555953088,"    * [ ] can lighten nextcloud's load - less confusion over file locations?"
 "6	LINE	0
-	if [[ "$HOST" == 'think' ]]; then
-|3,0,6,1,1,0,1555947844,"if [[ \"$HOST\" == 'think' ]]; then"
+	fi
+|3,0,6,1,1,0,1555947849,"fi"
 "7	LINE	0
-	
-|3,0,7,1,1,0,1555947844,""
+	if [[ "$HOST" == 'think' ]]; then
+|3,0,7,1,1,0,1555947844,"if [[ \"$HOST\" == 'think' ]]; then"
 "8	LINE	0
-	HISTFILE=~/.config/zsh/tmp/zsh_history
-|3,0,8,1,1,0,1555947843,"HISTFILE=~/.config/zsh/tmp/zsh_history"
+	
+|3,0,8,1,1,0,1555947844,""
 "9	LINE	0
-	  
-|3,0,9,1,1,0,1555947610,"  "
+	HISTFILE=~/.config/zsh/tmp/zsh_history
+|3,0,9,1,1,0,1555947843,"HISTFILE=~/.config/zsh/tmp/zsh_history"
 "b	CHAR	0
 	2506
 <d;bd:Vsp:vsplit€#4€#4u:w:€ku€ku€ku€ku€ku€ku;w:colo darq€ý,€ý.€#4€ý,€ý.cwpur;w:€ku€ku€kd€ku€ý,€ý.€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýK€ýK€ýK€ý,€ý.€kbcwnk;w:€ku€ku€kl€klcwgre:w:€ku€ku€kl€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýM€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kdr5€krx;w:€ku€ku€kl€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýM€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýM€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ku€ku€ku€ku€ku€ku€ku€kdr4;w:€ku€ku€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ku€ku€ku€ku€ku€ku€ku€ku€ku€ku€ý€ý€ý€kd€%i€%i€%i€%i€%i€%i€ý,€ý.\r€kd€kd€kd€ý,€ý.€ý€ý€ý€ý€kd€kd€ý€kd€ku€ku€ku€kr€kr€kr€kr€kr€kr€kr€kd€kr€kr€kr€kr€krr3€kr€krr4€kr€krr4€kl€kl€kl€kl€kl€kl€kl€kl€kl€kur2€kdr3€kdr4€kdr5€kdr6€kdr7;w:€ku€ku€ý,€ý.€ý,€ý.€kd€kd€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kl€kl€kl€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ýJ€ýJ€ýJ€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýM€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýM€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýK€ýM€ýK€ýK€ýK€ýK€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýL€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýL€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ý,€ý-€ý-€ý-€ý-€ý-€ý-€ý-€ý-€ý-€ý-€ý-€ý-€ý.€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ýJ€ý,€ý.€ýK€ýK€ýK:e€ku€ku€ku€ku€ku€ku€ku€ku€ý,€ý.€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€ku€kr€kd€kd€kd€kd€kd€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€ku€ku€ku€ku€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kd€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€kr€krr6;s
@@ -316,228 +316,275 @@ $gray
 |3,0,36,0,1,0,1555947846," "
 
 # File marks:
-'0  15  20  ~/vimwiki/boxen.wiki
-|4,48,15,20,1555982159,"~/vimwiki/boxen.wiki"
-'1  20  3  ~/vimwiki/colorscheme.wiki
-|4,49,20,3,1555981996,"~/vimwiki/colorscheme.wiki"
-'2  13  2  ~/.vimrc
-|4,50,13,2,1555960421,"~/.vimrc"
-'3  3  31  ~/dotfiles/.git/MERGE_MSG
-|4,51,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
-'4  10  23  ~/vimwiki/colorscheme.wiki
-|4,52,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
-'5  10  23  ~/vimwiki/colorscheme.wiki
-|4,53,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
-'6  220  0  ~/www/saghar/saghar.todo
-|4,54,220,0,1555958778,"~/www/saghar/saghar.todo"
-'7  11  0  ~/bin/old/z.sh
-|4,55,11,0,1555958439,"~/bin/old/z.sh"
-'8  4  32  ~/bin/toggler.sh
-|4,56,4,32,1555958418,"~/bin/toggler.sh"
-'9  1  0  ~/bin/toggler2.sh
-|4,57,1,0,1555958413,"~/bin/toggler2.sh"
+'0  1  0  ~/dotfiles/.gitignore
+|4,48,1,0,1555983267,"~/dotfiles/.gitignore"
+'1  1  7  ~/dotfiles/.gitignore
+|4,49,1,7,1555982994,"~/dotfiles/.gitignore"
+'2  1  7  ~/dotfiles/vim/.gitignore
+|4,50,1,7,1555982893,"~/dotfiles/vim/.gitignore"
+'3  5  10  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,51,5,10,1555982734,"~/dotfiles/vim/.vim/plugged/.gitignore"
+'4  13  2  ~/.vimrc
+|4,52,13,2,1555982612,"~/.vimrc"
+'5  15  20  ~/vimwiki/boxen.wiki
+|4,53,15,20,1555982159,"~/vimwiki/boxen.wiki"
+'6  15  20  ~/vimwiki/boxen.wiki
+|4,54,15,20,1555982159,"~/vimwiki/boxen.wiki"
+'7  20  3  ~/vimwiki/colorscheme.wiki
+|4,55,20,3,1555981996,"~/vimwiki/colorscheme.wiki"
+'8  13  2  ~/.vimrc
+|4,56,13,2,1555960421,"~/.vimrc"
+'9  3  31  ~/dotfiles/.git/MERGE_MSG
+|4,57,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
 
 # Jumplist (newest first):
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1555983267,"~/dotfiles/.gitignore"
+-'  1  7  ~/dotfiles/.gitignore
+|4,39,1,7,1555982994,"~/dotfiles/.gitignore"
+-'  1  7  ~/dotfiles/vim/.gitignore
+|4,39,1,7,1555982893,"~/dotfiles/vim/.gitignore"
+-'  1  7  ~/dotfiles/vim/.gitignore
+|4,39,1,7,1555982893,"~/dotfiles/vim/.gitignore"
+-'  1  7  ~/dotfiles/vim/.gitignore
+|4,39,1,7,1555982893,"~/dotfiles/vim/.gitignore"
+-'  1  7  ~/dotfiles/vim/.gitignore
+|4,39,1,7,1555982893,"~/dotfiles/vim/.gitignore"
+-'  5  10  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,5,10,1555982734,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  5  10  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,5,10,1555982734,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  5  10  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,5,10,1555982734,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  5  10  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,5,10,1555982734,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  5  10  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,5,10,1555982734,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  5  10  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,5,10,1555982734,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  5  10  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,5,10,1555982734,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  5  10  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,5,10,1555982734,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  1  0  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,1,0,1555982699,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  1  0  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,1,0,1555982699,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  1  0  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,1,0,1555982699,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  1  0  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,1,0,1555982699,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  1  0  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,1,0,1555982699,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  1  0  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,1,0,1555982699,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  1  0  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,1,0,1555982699,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  1  0  ~/dotfiles/vim/.vim/plugged/.gitignore
+|4,39,1,0,1555982699,"~/dotfiles/vim/.vim/plugged/.gitignore"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  13  2  ~/.vimrc
+|4,39,13,2,1555982612,"~/.vimrc"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  2  ~/vimwiki/boxen.wiki
+|4,39,15,2,1555982609,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
+-'  15  20  ~/vimwiki/boxen.wiki
+|4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
 -'  15  20  ~/vimwiki/boxen.wiki
 |4,39,15,20,1555982159,"~/vimwiki/boxen.wiki"
 -'  3  8  ~/vimwiki/index.wiki
 |4,39,3,8,1555982114,"~/vimwiki/index.wiki"
--'  1  0  ~/vimwiki/dotfiles.wiki
-|4,39,1,0,1555982111,"~/vimwiki/dotfiles.wiki"
--'  12  26  ~/vimwiki/index.wiki
-|4,39,12,26,1555982107,"~/vimwiki/index.wiki"
--'  20  3  ~/vimwiki/colorscheme.wiki
-|4,39,20,3,1555981996,"~/vimwiki/colorscheme.wiki"
--'  20  3  ~/vimwiki/colorscheme.wiki
-|4,39,20,3,1555981996,"~/vimwiki/colorscheme.wiki"
--'  11  25  ~/vimwiki/index.wiki
-|4,39,11,25,1555981989,"~/vimwiki/index.wiki"
--'  11  25  ~/vimwiki/index.wiki
-|4,39,11,25,1555981989,"~/vimwiki/index.wiki"
--'  5  2  ~/vimwiki/peeps.wiki
-|4,39,5,2,1555981985,"~/vimwiki/peeps.wiki"
--'  5  2  ~/vimwiki/peeps.wiki
-|4,39,5,2,1555981985,"~/vimwiki/peeps.wiki"
--'  4  1  ~/vimwiki/peeps.wiki
-|4,39,4,1,1555981983,"~/vimwiki/peeps.wiki"
--'  4  1  ~/vimwiki/peeps.wiki
-|4,39,4,1,1555981983,"~/vimwiki/peeps.wiki"
--'  14  2  ~/vimwiki/index.wiki
-|4,39,14,2,1555981981,"~/vimwiki/index.wiki"
--'  14  2  ~/vimwiki/index.wiki
-|4,39,14,2,1555981981,"~/vimwiki/index.wiki"
--'  13  2  ~/.vimrc
-|4,39,13,2,1555960421,"~/.vimrc"
--'  13  2  ~/.vimrc
-|4,39,13,2,1555960421,"~/.vimrc"
--'  13  2  ~/.vimrc
-|4,39,13,2,1555960421,"~/.vimrc"
--'  13  2  ~/.vimrc
-|4,39,13,2,1555960421,"~/.vimrc"
--'  3  31  ~/dotfiles/.git/MERGE_MSG
-|4,39,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
--'  3  31  ~/dotfiles/.git/MERGE_MSG
-|4,39,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
--'  3  31  ~/dotfiles/.git/MERGE_MSG
-|4,39,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
--'  3  31  ~/dotfiles/.git/MERGE_MSG
-|4,39,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
--'  3  31  ~/dotfiles/.git/MERGE_MSG
-|4,39,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
--'  3  31  ~/dotfiles/.git/MERGE_MSG
-|4,39,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
--'  3  31  ~/dotfiles/.git/MERGE_MSG
-|4,39,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
--'  3  31  ~/dotfiles/.git/MERGE_MSG
-|4,39,3,31,1555959426,"~/dotfiles/.git/MERGE_MSG"
--'  1  0  ~/dotfiles/.git/MERGE_MSG
-|4,39,1,0,1555959398,"~/dotfiles/.git/MERGE_MSG"
--'  1  0  ~/dotfiles/.git/MERGE_MSG
-|4,39,1,0,1555959398,"~/dotfiles/.git/MERGE_MSG"
--'  1  0  ~/dotfiles/.git/MERGE_MSG
-|4,39,1,0,1555959398,"~/dotfiles/.git/MERGE_MSG"
--'  1  0  ~/dotfiles/.git/MERGE_MSG
-|4,39,1,0,1555959398,"~/dotfiles/.git/MERGE_MSG"
--'  1  0  ~/dotfiles/.git/MERGE_MSG
-|4,39,1,0,1555959398,"~/dotfiles/.git/MERGE_MSG"
--'  1  0  ~/dotfiles/.git/MERGE_MSG
-|4,39,1,0,1555959398,"~/dotfiles/.git/MERGE_MSG"
--'  1  0  ~/dotfiles/.git/MERGE_MSG
-|4,39,1,0,1555959398,"~/dotfiles/.git/MERGE_MSG"
--'  1  0  ~/dotfiles/.git/MERGE_MSG
-|4,39,1,0,1555959398,"~/dotfiles/.git/MERGE_MSG"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  10  23  ~/vimwiki/colorscheme.wiki
-|4,39,10,23,1555959090,"~/vimwiki/colorscheme.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  14  2  ~/vimwiki/index.wiki
-|4,39,14,2,1555959087,"~/vimwiki/index.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  14  2  ~/vimwiki/index.wiki
-|4,39,14,2,1555959087,"~/vimwiki/index.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  14  2  ~/vimwiki/index.wiki
-|4,39,14,2,1555959087,"~/vimwiki/index.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  14  2  ~/vimwiki/index.wiki
-|4,39,14,2,1555959087,"~/vimwiki/index.wiki"
--'  3  2  ~/vimwiki/stuff.wiki
-|4,39,3,2,1555959087,"~/vimwiki/stuff.wiki"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  15  15  ~/vimwiki/boxen.wiki
-|4,39,15,15,1555959086,"~/vimwiki/boxen.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  15  15  ~/vimwiki/boxen.wiki
-|4,39,15,15,1555959086,"~/vimwiki/boxen.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  15  15  ~/vimwiki/boxen.wiki
-|4,39,15,15,1555959086,"~/vimwiki/boxen.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  15  15  ~/vimwiki/boxen.wiki
-|4,39,15,15,1555959086,"~/vimwiki/boxen.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  15  15  ~/vimwiki/boxen.wiki
-|4,39,15,15,1555959086,"~/vimwiki/boxen.wiki"
--'  10  1  ~/dotfiles/vim/.vim/plug.vimrc
-|4,39,10,1,1555959086,"~/dotfiles/vim/.vim/plug.vimrc"
--'  94  0  ~/vimwiki/figlet.wiki
-|4,39,94,0,1555959086,"~/vimwiki/figlet.wiki"
--'  15  15  ~/vimwiki/boxen.wiki
-|4,39,15,15,1555959086,"~/vimwiki/boxen.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
+-'  3  8  ~/vimwiki/index.wiki
+|4,39,3,8,1555982114,"~/vimwiki/index.wiki"
 
 # History of marks within files (newest to oldest):
 
+> ~/dotfiles/.gitignore
+	*	1555983182	0
+	"	1	0
+	^	1	8
+	.	1	7
+	+	1	7
+
+> ~/dotfiles/vim/.gitignore
+	*	1555982889	0
+	"	1	7
+	^	1	8
+	.	1	7
+	+	1	7
+
+> ~/dotfiles/vim/.vim/plugged/.gitignore
+	*	1555982730	0
+	"	5	10
+	^	5	11
+	.	5	10
+	+	5	10
+
+> ~/.vimrc
+	*	1555982610	0
+	"	13	2
+	^	8	19
+	.	5	0
+	+	31	0
+	+	30	10
+	+	28	0
+	+	30	52
+	+	26	0
+	+	5	0
+	+	14	50
+	+	43	18
+	+	8	18
+	+	8	0
+	+	10	0
+	+	23	16
+	+	5	2
+	+	5	0
+
 > ~/vimwiki/boxen.wiki
-	*	1555982153	0
-	"	15	20
+	*	1555982606	0
+	"	15	2
 	^	15	21
 	.	15	0
 	+	3	8
@@ -777,26 +824,6 @@ $gray
 	+	4	2
 	+	5	0
 	+	7	0
-
-> ~/.vimrc
-	*	1555960417	0
-	"	13	2
-	^	8	19
-	.	5	0
-	+	31	0
-	+	30	10
-	+	28	0
-	+	30	52
-	+	26	0
-	+	5	0
-	+	14	50
-	+	43	18
-	+	8	18
-	+	8	0
-	+	10	0
-	+	23	16
-	+	5	2
-	+	5	0
 
 > ~/NERD_tree_1
 	*	1555960406	0
@@ -2499,21 +2526,3 @@ $gray
 > /usr/share/vim/vim80/doc/eval.txt
 	*	1555460498	0
 	"	3521	50
-
-> ~/dotfiles/vim/colors/NERD_tree_2
-	*	1555458237	0
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/dotfiles/vim/colors/__Mundo_Preview__
-	*	1555455201	0
-	"	23	0
-	.	1	0
-	+	1	0
-
-> ~/dotfiles/vim/colors/__Mundo__
-	*	1555455198	0
-	"	69	21
-	.	1	0
-	+	1	0
