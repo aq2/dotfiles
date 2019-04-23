@@ -38,6 +38,13 @@
   set ignorecase hlsearch incsearch
   set wildmenu wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*/Music/*,*/Pictures/*
 
+  set viminfo+=n~/.vim/tmp/viminfo
+  set backup backupdir=~/.vim/tmp/backup//
+  set directory=~/.vim/tmp/swap// directory+=.
+  set undofile undodir=~/.vim/tmp/undo undodir+=.
+
+  " let NERDTreeBookmarksFile=expand("$HOME/.vim/tmp/NERDTreeBookmarks")
+
 
 "  gvim settings
   if has('gui_running')
@@ -51,13 +58,14 @@
 "  netrw obviously
   let g:netrw_banner = 0
   let g:netrw_winsize = 25
+  let g:netrw_dirhistmax=0
   let g:netrw_liststyle = 3
 
 
 "  source other vim settings
   source $HOME/.vim/keys.vimrc
   source $HOME/.vim/nerd.vimrc
-  source $HOME/.vim/think.vimrc
+  " source $HOME/.vim/think.vimrc
   source $HOME/.vim/lightline.vimrc
   source $HOME/.vim/autocommands.vimrc
   source $HOME/.vim/plugin-settings.vimrc
