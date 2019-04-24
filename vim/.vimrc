@@ -2,7 +2,7 @@
   source $HOME/.vim/plug.vimrc
 
 "  general settings
-  " syntax on
+  syntax on
   set backspace=2
   set background=dark
   colorscheme gravy
@@ -19,13 +19,11 @@
   set updatetime=100 ttimeoutlen=50
   set clipboard^=unnamed,unnamedplus
 
-" °¬ː˃˅˜˞⌁
-
   set linebreak
   set showbreak=˜
   set fillchars=vert:\ 
   set autoindent copyindent
-  " filetype plugin indent on
+  filetype plugin indent on
   set wrap whichwrap+=<,>,[,]
   set shiftround shiftwidth=2
   set tabstop=2 softtabstop=2 expandtab
@@ -65,7 +63,6 @@
 "  source other vim settings
   source $HOME/.vim/keys.vimrc
   source $HOME/.vim/nerd.vimrc
-  " source $HOME/.vim/think.vimrc
   source $HOME/.vim/lightline.vimrc
   source $HOME/.vim/autocommands.vimrc
   source $HOME/.vim/plugin-settings.vimrc

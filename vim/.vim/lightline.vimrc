@@ -1,5 +1,7 @@
+  source ~/dotfiles/vim/.vim/colors/gravyLine.vim
+
   let g:lightline = {
-      \ 'colorscheme': 'darcula',
+      \ 'colorscheme': 'gravyLine',
       \ 'component_function': {
       \   'gitAQ': 'GitAQ' 
       \ },
@@ -11,6 +13,13 @@
       \ 'inactive': {},
   \ }
 
+  let g:lightline#bufferline#modified  = ' 😱'
+  let g:lightline#bufferline#read_only  = ' '
+  let g:lightline.component_type   = {'buffers': 'tabsel'}
+  let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+  let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+
+
   function! GitAQ()
     if gitbranch#name() == ''
       return ''
@@ -20,15 +29,7 @@
       return '  '
   endfunction
     
-  "                   
   
-  let g:lightline#bufferline#modified  = ' 😱'
-  let g:lightline#bufferline#read_only  = ' '
-  let g:lightline#bufferline#show_number  = 0    " if 2, show nums from 1
-  let g:lightline.component_type   = {'buffers': 'tabsel'}
-  let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-  let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
-
   function! LightlineUpdateAQ()
     if g:goyo==0
       call lightline#update()
@@ -37,6 +38,7 @@
 
   " TODO - more actions needed here?
   au BufWritePost,TextChanged,TextChangedI * call LightlineUpdateAQ()
+
 
   nmap <Leader>1 <Plug>lightline#bufferline#go(1)
   nmap <Leader>2 <Plug>lightline#bufferline#go(2)
@@ -48,5 +50,4 @@
   nmap <Leader>8 <Plug>lightline#bufferline#go(8)
   nmap <Leader>9 <Plug>lightline#bufferline#go(9)
   nmap <Leader>0 <Plug>lightline#bufferline#go(10)
-
 

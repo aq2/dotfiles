@@ -4,3 +4,4 @@ tmp/
 spell/
 vim_mru_files
 NERDTreeBookmarks
+.netrwhist

@@ -26,6 +26,7 @@
   # AGKOZAK_CUSTOM_SYMBOLS=( '&*' '&' '*' '+' 'x' '!' '>' '?' )
   AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '↓' '↑' '+' 'x' '!' '>' '?' )
 
+  source "/home/angelo/.config/zsh/plugins/zsh-z.plugin.zsh"
 
 #   fzf
   if [[ ! "$PATH" == */home/angelo/.config/fzf/bin* ]]; then
@@ -40,7 +41,10 @@
 
 
 # misc
+  autoload -U compinit && compinit
   source /home/angelo/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  zstyle ':completion:*' menu select
+  
 
   function take() {
     mkdir -p $1
