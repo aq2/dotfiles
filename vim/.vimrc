@@ -4,8 +4,9 @@
 "  general settings
   syntax on
   set backspace=2
-  set background=dark
+  set nocompatible
   colorscheme gravy
+  set background=dark
   set ttyfast termguicolors
   set splitbelow splitright
   set rnu number numberwidth=5
@@ -16,7 +17,7 @@
   set encoding=utf-8
   set hidden autoread
   set virtualedit=block
-  set updatetime=100 ttimeoutlen=50
+  set updatetime=100 ttimeoutlen=20
   set clipboard^=unnamed,unnamedplus
 
   set linebreak
