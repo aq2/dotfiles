@@ -79,7 +79,7 @@
   imap :( 😕
   imap *** *         *           *           *           *
   imap hh 🗿
-  imap DO 🌊
+  imap DGO 🌊
   imap idee 💡
   imap qw ❓
   imap omg 😱
