@@ -5,16 +5,16 @@
   let g:vimwiki_listsyms = ' '
   " let g:vimwiki_list = [{'path': '~/vimwiki'}]
    
-  let wiki_1 = {}
-  let wiki_1.path = '~/vimwiki/'
+  " let wiki_1 = {}
+  " let wiki_1.path = '~/vimwiki/'
 
   let wiki_2 = {}
   let wiki_2.ext = '.md'
-  let wiki_2.path = '~/vimmark/'
+  let wiki_2.path = '~/vimwiki/'
   let wiki_2.syntax = 'markdown'
   let wiki_2.list_margin = 0
 
-  let g:vimwiki_list = [wiki_1, wiki_2]
+  let g:vimwiki_list = [wiki_2]
 
 
   " autocmd BufNewFile *.wiki :r! echo = %:t:r =
