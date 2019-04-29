@@ -1,4 +1,6 @@
-" Vim colour scheme - gravy
+" Vim colour scheme: gravy
+" Author: angelo
+" Last Change: 29-04-19
 
 "   init
   if exists("syntax on")
@@ -10,7 +12,7 @@
   set background=dark
   let g:colors_name = "gravy"
 
-" set colour variables.
+" set colour variables
   let s:darker="#2d241e"
   let s:dark="#312721"
 
@@ -30,10 +32,11 @@
   let s:bg3="#4b4747"
   let s:bg4="#5c5959"
 
+
   " let s:fg0="#5c4a3e"
   " let s:brown= "#806656"
   
-  
+  " unused?  
   let s:fg1="#997a68"
   let s:fg2="#a3a3a3"
   let s:fg3="#959595"
@@ -44,13 +47,10 @@
 "   cursors
   hi CursorLine guibg=#373632 guifg=NONE cterm=none
   autocmd InsertEnter * hi CursorLine guibg=#404000 cterm=none
-  " autocmd InsertEnter * hi CursorLine guibg=#88360a
   autocmd InsertLeave * hi CursorLine guibg=#373632 cterm=none
-  " autocmd InsertLeave * hi CursorLine guibg=#073642
 
   set guicursor=i:ver20-iCursor
   hi iCursor guibg=yellow ctermbg=yellow
-  " hi Cursor guibg=steelblue ctermbg=red ctermfg=white
 
 " basic text
   exe 'hi Normal guifg='s:fg' guibg='s:dark 
@@ -63,9 +63,9 @@
   exe 'hi Conditional guifg='s:dblue  
   exe 'hi PreProc guifg='s:dblue  
   exe 'hi Define guifg='s:dblue  
-  hi! link htmlTagName Keyword 
   exe 'hi Operater guifg='s:dblue  
   exe 'hi StorageClass guifg='s:dblue
+  hi! link htmlTagName Keyword 
 
 "   constants
   exe 'hi Constant guifg='s:brown  
@@ -84,7 +84,7 @@
 "   line numbers and ui
   exe 'hi LineNr guifg='s:fg0' guibg='s:darker 
   exe 'hi CursorLineNr guifg='s:fg' guibg='s:dark 
-  exe 'hi VertSplit guifg='s:bg' guibg='s:dark
+  exe 'hi VertSplit guifg='s:dark' guibg='s:dark
   exe 'hi Folded guifg='s:plum' guibg='s:darker 
 
 "  vimwiki
@@ -107,8 +107,9 @@
   exe 'hi WarningMsg guifg='s:fg' guibg='s:orange 
   exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
   exe 'hi PmenuSel  guibg='s:bg3 
-  exe 'hi WildMenu  guifg='s:bg' guibg='s:orange  
+  exe 'hi WildMenu  guifg='s:dark' guibg='s:orange  
   exe 'hi Directory guifg='s:brown  
+  exe 'hi MoreMsg guifg='s:orange  
 
 " dunno really
   exe 'hi Type guifg='s:plum 

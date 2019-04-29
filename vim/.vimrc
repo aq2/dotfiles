@@ -16,6 +16,7 @@
 
   set encoding=utf-8
   set hidden autoread
+  set ambiwidth=double
   set virtualedit=block
   set updatetime=100 ttimeoutlen=20
   set clipboard^=unnamed,unnamedplus
@@ -28,10 +29,9 @@
   set wrap whichwrap+=<,>,[,]
   set shiftround shiftwidth=2
   set tabstop=2 softtabstop=2 expandtab
+
   " set list shows whitespace characters if you wanna
   " set list listchars=tab:‥\ ,trail:˙,nbsp:␣
-
-  set ambiwidth=double
 
   set path+=**
   set gdefault

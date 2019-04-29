@@ -34,9 +34,9 @@
   nnoremap <silent> <leader>cc :call ToggleColours()<CR>
 
   function! ToggleColours()
-    if g:colors_name == 'maxwell'
+    if g:colors_name == 'gravy'
       colo bubblegum-256-light
     else
-      colo maxwell
+      colo gravy
     endif
   endfunction

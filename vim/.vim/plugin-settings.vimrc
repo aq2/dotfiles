@@ -30,11 +30,14 @@
   let g:startify_bookmarks = [ {'w': '~/vimwiki/index.wiki'}, '~/.zshrc' ]
   let g:startify_custom_header = map(startify#fortune#boxed(), '"    ".v:val')
 
-  autocmd User StartifyReady set noshowcmd
-  autocmd User StartifyReady let &l:stl = ' '
+  autocmd User StartifyReady setlocal cursorline
+  autocmd User StartifyReady set laststatus=0
+  " autocmd User StartifyReady let &l:stl = ' '
   
-  autocmd User Startified set showcmd
-  autocmd User Startified setlocal cursorline
+  " autocmd User Startified set showcmd
+  " autocmd User Startified setlocal cursorline
+  " autocmd User Startified set laststatus=2
+  autocmd User StartifyBufferOpened set laststatus=2
 
   let g:startify_lists = [
       \ { 'type': 'files',     'header': ['   MRU']            },

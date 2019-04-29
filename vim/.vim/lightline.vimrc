@@ -12,7 +12,9 @@
       \ 'subseparator': { 'left': '', 'right': '' },
       \ 'inactive': {},
   \ }
+  
 
+  let g:lightline.enable = { 'tabline': 0 }
   let g:lightline#bufferline#modified  = ' 😱'
   let g:lightline#bufferline#read_only  = ' '
   let g:lightline.component_type   = {'buffers': 'tabsel'}
