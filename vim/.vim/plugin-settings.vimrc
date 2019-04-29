@@ -46,7 +46,7 @@
 "... Goyo and limelight
   let g:goyo=0
   let goyo_width=110
-  let goyo_height=98
+  let goyo_height=100
   let g:limelight_paragraph_span = 1
 
   function! s:goyo_enter()
@@ -65,9 +65,9 @@
 
 "... misc
   let MRU_Add_Menu = 0
-  let MRU_Window_Height = 15
+  let MRU_Window_Height = 10
   let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'
-  let MRU_File = '~/.vim/vim_mru_files'
+  " let MRU_File = '~/.vim/tmp/vim_mru_files'
 
   let g:user_emmet_install_global = 0
   " let g:user_emmet_leader_key='<C-M>'

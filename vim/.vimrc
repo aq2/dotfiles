@@ -31,7 +31,7 @@
   " set list shows whitespace characters if you wanna
   " set list listchars=tab:‥\ ,trail:˙,nbsp:␣
 
-set ambiwidth=double
+  set ambiwidth=double
 
   set path+=**
   set gdefault
