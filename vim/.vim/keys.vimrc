@@ -80,7 +80,7 @@
   " imap idee 💡
   imap qw ❓
   imap omg 😱
-  imap ==  
+  imap ==  
   imap --  
   imap //  
   imap 88  
@@ -116,7 +116,7 @@
 
 
   " --- cancel task in vimwiki
-  nmap <C-x> glx>
+  nmap <A-c> glx>
 
 
   nmap <leader>sp :call <SID>SynStack()<CR>

@@ -1,7 +1,7 @@
-  source ~/dotfiles/vim/.vim/colors/gravyLine.vim
+  source ~/dotfiles/vim/.vim/colors/gravyLine3.vim
 
   let g:lightline = {
-      \ 'colorscheme': 'gravyLine',
+      \ 'colorscheme': 'gravyLine3',
       \ 'component_function': {
       \   'gitAQ': 'GitAQ' 
       \ },
@@ -14,7 +14,6 @@
   \ }
   
 
-  let g:lightline.enable = { 'tabline': 0 }
   let g:lightline#bufferline#modified  = ' 😱'
   let g:lightline#bufferline#read_only  = ' '
   let g:lightline.component_type   = {'buffers': 'tabsel'}
@@ -38,7 +37,7 @@
     endif
   endfunction
 
-  " TODO - more actions needed here?
+
   au BufWritePost,TextChanged,TextChangedI * call LightlineUpdateAQ()
 
 

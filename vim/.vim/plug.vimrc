@@ -1,4 +1,3 @@
-
 ".....  Plug
   if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -8,7 +7,6 @@
 
   call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
-    " Plug 'ap/vim-css-color'
     "Plug 'digitaltoad/vim-pug'
     Plug 'hail2u/vim-css3-syntax'
     "Plug 'iloginow/vim-stylus'
@@ -33,5 +31,4 @@
     Plug 'yegappan/mru'
     Plug 'yurifury/hexHighlight'
   call plug#end()
-
 

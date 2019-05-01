@@ -13,24 +13,24 @@
   let g:colors_name = "gravy"
 
 " set colour variables
-  let s:darker="#2d241e"
-  let s:dark="#312721"
+  let s:darker="#4d443e"
+  let s:dark="#514741"
 
-  let s:dblue="#5f547d"
-  let s:plum="#974670"
-  let s:purple='#772266'
-  let s:brown= "#907656"
-  let s:orange="#e86310"
-  let s:pink="#f81050"
+  let s:dblue="#7f749d"
+  let s:plum="#b76690"
+  let s:purple='#974286'
+  let s:brown= "#b09676"
+  let s:orange="#f88330"
+  let s:pink="#f83070"
   
-  let s:fg0="#7a695c"
-  let s:fg="#957764"
-  let s:fg4="#a58a7a"
+  let s:fg0="#9a897c"
+  let s:fg="#b59784"
+  let s:fg4="#c5aa9a"
   
-  let s:gray="#373632"
-  let s:bg2="#3a3636"
-  let s:bg3="#4b4747"
-  let s:bg4="#5c5959"
+  let s:gray="#575652"
+  let s:bg2="#5a5656"
+  let s:bg3="#6b6767"
+  let s:bg4="#7c7979"
 
 
   " let s:fg0="#5c4a3e"
@@ -45,9 +45,9 @@
   let s:var="#c27d7b"
 
 "   cursors
-  hi CursorLine guibg=#373632 guifg=NONE cterm=none
-  autocmd InsertEnter * hi CursorLine guibg=#404000 cterm=none
-  autocmd InsertLeave * hi CursorLine guibg=#373632 cterm=none
+  hi CursorLine guibg=#575652 guifg=NONE cterm=none
+  autocmd InsertEnter * hi CursorLine guibg=#606000 cterm=none
+  autocmd InsertLeave * hi CursorLine guibg=#575652 cterm=none
 
   set guicursor=i:ver20-iCursor
   hi iCursor guibg=yellow ctermbg=yellow

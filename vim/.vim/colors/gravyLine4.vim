@@ -1,20 +1,21 @@
 " =========================================================
 " Author: kkopec
-" Hacker: angelo
+" Hacker: aq2
 " License: MIT License
 " Last Change: 2017/02/11 2019/4/30
 " =========================================================
 
-let s:black = [ '#2d241e', 213 ]
-let s:purple = [ '#2b2b2b', 235 ]
-let s:green = [ '#629755', 71 ] 
-let s:white = [ '#957764', 250 ]
-let s:orange = [ '#c8764a', 104 ]
-let s:midgray = [ '#474642', 91 ]
+let s:black = [ '#4d443e', 213 ]
+let s:purple = [ '#4b4b4b', 235 ]
+let s:green = [ '#82b775', 71 ] 
+let s:white = [ '#b59784', 250 ]
+let s:orange = [ '#e8966a', 104 ]
+let s:midgray = [ '#716761', 91 ]
+" let s:midgray = [ '#676662', 91 ]
 " let s:midgray = [ '#373632', 91 ]
 
-let s:red = [ '#ff2b68', 204 ]
-let s:yellow = [ '#ffc66d', 222 ]
+let s:red = [ '#ff4b88', 204 ]
+let s:yellow = [ '#ffe68d', 222 ]
 
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
@@ -42,7 +43,7 @@ let s:p.tabline.left = [ [ s:white, s:black ] ]
 let s:p.tabline.middle = [ [ s:orange, s:purple ] ]
 let s:p.tabline.right = [ [ s:white, s:black ] ]
 
-" for inactive splits TODO
+" for inactive splits
 let s:p.inactive.left =  [ [ s:green, s:purple ], [ s:purple, s:black ] ]
 let s:p.inactive.middle = [ [ s:purple, s:black ] ]
 let s:p.inactive.right = [ [ s:midgray, s:black ], [ s:midgray, s:black ] ]
@@ -51,5 +52,5 @@ let s:p.inactive.right = [ [ s:midgray, s:black ], [ s:midgray, s:black ] ]
 let s:p.normal.error = [ [ s:red, s:yellow ] ]
 let s:p.normal.warning = [ [ s:yellow, s:red ] ]
 
-let g:lightline#colorscheme#gravyLine#palette = lightline#colorscheme#flatten(s:p)
+let g:lightline#colorscheme#gravyLine3#palette = lightline#colorscheme#flatten(s:p)
 

@@ -5,7 +5,7 @@
   syntax on
   set backspace=2
   set nocompatible
-  colorscheme gravy
+  colorscheme gravy3
   set background=dark
   set ttyfast termguicolors
   set splitbelow splitright
@@ -16,7 +16,7 @@
 
   set encoding=utf-8
   set hidden autoread
-  set ambiwidth=double
+  " set ambiwidth=double
   set virtualedit=block
   set updatetime=100 ttimeoutlen=20
   set clipboard^=unnamed,unnamedplus
@@ -43,8 +43,6 @@
   set backup backupdir=~/.vim/tmp/backup//
   set directory=~/.vim/tmp/swap// directory+=.
   set undofile undodir=~/.vim/tmp/undo undodir+=.
-
-  let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
 
 
 "  gvim settings
