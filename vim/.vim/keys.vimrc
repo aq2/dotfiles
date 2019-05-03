@@ -52,19 +52,23 @@
   map <Leader>n :NERDTreeToggle<CR>
   map <Leader>g :Goyo<CR>
   map <Leader>l :Limelight!!<CR>
-  map <Leader>h :nohl<CR>
+  map <Leader>hl :nohl<CR>
   map <silent> <Leader>st :Startify<CR>
-  nmap <silent> <leader>m :MRU<CR>
   nnoremap <Leader>r :MRU<CR>
+  map <Leader>ec :EC<CR>
+  map <Leader>mu  :MundoToggle<CR>
+
+  ab wt :VimwikiTable
   
+  map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+
   nnoremap <Leader>f :FZF<CR>
   nnoremap <Leader>! :FZF!<CR>
   nnoremap <C-p> :<C-u>FZF<CR>
 
-  nnoremap <Leader>i :IndentLinesToggle<CR>
+  " map <Leader>m <C-h><C-h> 
 
-  " TODO fucked - need gc for multiline
-  " nmap <silent> <Leader># <Plug>Commentary
   nmap <Leader># gcc
 
 " --- symbology ---
@@ -77,7 +81,6 @@
   imap :) 😃
   imap :( 😕
   imap *** *         *           *           *           *
-  " imap idee 💡
   imap qw ❓
   imap omg 😱
   imap ==  
@@ -88,9 +91,9 @@
   imap idee  
   imap 66  
   imap 77  
-
-" 💡🎬🐧👀💩💰💲💻📡🖥🗿😺😸😀😱🙀🛵🤖🦑🌊📞📱😕😀😁😃
-"            🙂😀😃😁😄😾🙁
+  imap hh 
+" 🎬💰💻🖥😺😸😀😱🙀😕😀😁😃
+"            😀😃😁😄😾
 
 
 " --- bubbles ---
@@ -105,14 +108,16 @@
   imap <S-Up> <ESC>xkP`[V`]i
   imap <S-Down> <ESC>xp`[V`]
  
-" --- marks ---
-  " mark/unmark line  \l marks line, 'l returns to marked line, :match to clear
-  nnoremap <silent> <Leader>k mk:execute 'match Search /\%'.line('.').'l/'<CR>
-  " nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
-  " \p = permanent marker
-  nnoremap <silent> <Leader>p :exe "let m = matchadd('WildMenu','\\%" . line('.') . "l')"<CR>
-  " \q clears all, perms and temps
-  nnoremap <silent> <Leader>q :call clearmatches()<CR>
+
+
+" " --- marks ---
+"   " mark/unmark line  \l marks line, 'l returns to marked line, :match to clear
+"   nnoremap <silent> <Leader>k mk:execute 'match Search /\%'.line('.').'l/'<CR>
+"   " nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
+"   " \p = permanent marker
+"   nnoremap <silent> <Leader>p :exe "let m = matchadd('WildMenu','\\%" . line('.') . "l')"<CR>
+"   " \q clears all, perms and temps
+"   nnoremap <silent> <Leader>q :call clearmatches()<CR>
 
 
   " --- cancel task in vimwiki

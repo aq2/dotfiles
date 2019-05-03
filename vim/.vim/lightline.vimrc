@@ -1,7 +1,8 @@
-  source ~/dotfiles/vim/.vim/colors/gravyLine3.vim
+  source ~/dotfiles/vim/.vim/colors/gravyLine.vim
+  " source ~/dotfiles/vim/.vim/colors/gravyLine3.vim
 
   let g:lightline = {
-      \ 'colorscheme': 'gravyLine3',
+      \ 'colorscheme': 'gravyLine',
       \ 'component_function': {
       \   'gitAQ': 'GitAQ' 
       \ },
@@ -25,9 +26,9 @@
     if gitbranch#name() == ''
       return ''
     elseif gitbranch#name() == 'master'
-      return '  '
+      return ''
     else
-      return '  '
+      return ''
   endfunction
     
   

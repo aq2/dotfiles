@@ -5,7 +5,7 @@
   syntax on
   set backspace=2
   set nocompatible
-  colorscheme gravy3
+  colorscheme gravy2
   set background=dark
   set ttyfast termguicolors
   set splitbelow splitright
@@ -16,7 +16,7 @@
 
   set encoding=utf-8
   set hidden autoread
-  " set ambiwidth=double
+  set ambiwidth=double
   set virtualedit=block
   set updatetime=100 ttimeoutlen=20
   set clipboard^=unnamed,unnamedplus

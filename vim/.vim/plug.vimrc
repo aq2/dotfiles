@@ -6,19 +6,19 @@
   endif
 
   call plug#begin('~/.vim/plugged')
-    Plug 'airblade/vim-gitgutter'
     "Plug 'digitaltoad/vim-pug'
+    Plug 'chrisbra/changesPlugin'
     Plug 'hail2u/vim-css3-syntax'
     "Plug 'iloginow/vim-stylus'
     Plug 'itchyny/lightline.vim'
     Plug 'itchyny/vim-gitbranch'
     Plug 'joeytwiddle/sexy_scroller.vim'
+    Plug 'jeetsukumaran/vim-markology'
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
     Plug 'junegunn/fzf', { 'dir': '~/.config/fzf', 'do': './install --all' }
     Plug 'mattn/emmet-vim'
-    Plug 'mattn/calendar-vim'
     " Plug 'maxboisvert/vim-simple-complete'
     Plug 'mgee/lightline-bufferline'
     Plug 'mhinz/vim-startify'

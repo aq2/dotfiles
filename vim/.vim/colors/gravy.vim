@@ -32,6 +32,8 @@
   let s:bg3="#4b4747"
   let s:bg4="#5c5959"
 
+  let s:greenish='#3D2D20'
+  let s:grayish='#392E27'
 
   " let s:fg0="#5c4a3e"
   " let s:brown= "#806656"
@@ -102,9 +104,9 @@
   exe 'hi Visual guifg='s:dark' guibg='s:fg
   exe 'hi Search guibg='s:fg
   exe 'hi IncSearch guifg='s:fg' guibg='s:dark 
-  exe 'hi ErrorMsg guifg='s:darker' guibg='s:pink' gui=bold'
+  exe 'hi ErrorMsg guifg='s:pink' guibg='s:dark' gui=bold'
   exe 'hi Question guifg='s:orange' guibg='s:dark' gui=bold'
-  exe 'hi WarningMsg guifg='s:fg' guibg='s:orange 
+  exe 'hi WarningMsg guifg='s:orange' guibg='s:dark' gui=bold'
   exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
   exe 'hi PmenuSel  guibg='s:bg3 
   exe 'hi WildMenu  guifg='s:dark' guibg='s:orange  
@@ -114,16 +116,17 @@
 " dunno really
   exe 'hi Type guifg='s:plum 
   exe 'hi NonText guifg='s:bg4' guibg='s:dark 
-  exe 'hi DiffAdd guifg=#000000 guibg=#ddffdd gui=bold'
-  exe 'hi DiffDelete guifg=#ff0000'  
-  exe 'hi DiffChange  guibg='s:bg2
+  exe 'hi DiffAdd guibg='s:grayish
+  exe 'hi DiffDelete guibg=#500000'  
+  exe 'hi DiffChange  guibg='s:greenish
   exe 'hi DiffText guifg=#000000 guibg=#ddddff gui=bold'
   exe 'hi Label guifg='s:var
   exe 'hi Tag guifg='s:dblue  
-  " exe 'hi CursorColumn  guibg='s:bg2 
+  " exe 'hi CursorColumn  guibg='s:bg2
+  "
   " exe 'hi ColorColumn  guibg='s:bg2 
 
-" lanuage specific
+" language specific
   " Python Highlighting
   exe 'hi pythonBuiltinFunc guifg='s:builtin
 
@@ -141,3 +144,13 @@
   " Markdown Highlighting
   exe 'hi mkdCode guifg='s:builtin
 
+" ch ch ch changes  
+  exe 'hi ChangesSignTextAdd guifg='s:brown' guibg='s:darker
+  exe 'hi ChangesSignTextDel guifg='s:orange' guibg='s:darker
+  exe 'hi ChangesSignTextCh guifg='s:pink' guibg='s:darker
+
+ "hi ChangesSignTextAdd ctermbg=yellow ctermfg=black guibg=green
+ "hi ChangesSignTextDel ctermbg=white  ctermfg=black guibg=red
+ "hi ChangesSignTextCh  ctermbg=black  ctermfg=white guibg=blue
+ "hi ChangesSignTextDummyCh  ctermfg=NONE ctermbg=white guifg=NONE guibg=white
+ "hi ChangesSignTextDummyAdd ctermfg=NONE ctermbg=green guifg=NONE guibg=green

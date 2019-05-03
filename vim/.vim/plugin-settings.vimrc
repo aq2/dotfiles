@@ -36,8 +36,8 @@
 
 "... Goyo and limelight
   let g:goyo=0
-  let goyo_width=110
-  let goyo_height=100
+  let g:goyo_width=110
+  let g:goyo_height=99
   let g:limelight_paragraph_span = 1
 
   function! s:goyo_enter()
@@ -66,4 +66,7 @@
 
   let g:SexyScroller_MaxTime = 100
   let g:SexyScroller_EasingStyle = 2
+
+  let g:changes_use_icons = 0
+  let g:changes_respect_SignColumn = 1
 

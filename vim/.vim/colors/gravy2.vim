@@ -1,143 +1,150 @@
 " Vim colour scheme: gravy
 " Author: angelo
-" Last Change: 29-04-19
 
 "   init
-  if exists("syntax on")
-    syntax reset
-  endif
-
+  syntax reset
   set t_Co=256
   set background=dark
   hi clear
-  let g:colors_name = "gravy"
+  let g:colors_name = "gravy2"
 
 " set colour variables
-  let s:darker="#4d443e"
-  let s:dark="#514741"
-
-  let s:dblue="#7f749d"
+  let s:grape='#772266'
+  let s:eggplant='#974286'
+  let s:purple="#7f749d"
   let s:plum="#b76690"
-  let s:purple='#974286'
   let s:brown= "#b09676"
   let s:orange="#f88330"
   let s:pink="#f83070"
-  
-  let s:fg0="#9a897c"
-  let s:fg="#b59784"
-  let s:fg4="#c5aa9a"
-  
-  let s:gray="#575652"
-  let s:bg2="#5a5656"
-  let s:bg3="#6b6767"
-  let s:bg4="#7c7979"
 
+  let s:darker="#2d241e"
+  let s:dark="#312721"
+  let s:dgray='#5a493c'
+  let s:gray="#968477"
+  let s:white="#b59784"
+  let s:brite="#c5aa9a"
 
-  " let s:fg0="#5c4a3e"
-  " let s:brown= "#806656"
+  let s:greenish='#3D2D20'
+  let s:grayish='#392E27'
   
-  " unused?  
-  let s:fg1="#997a68"
-  let s:fg2="#a3a3a3"
-  let s:fg3="#959595"
-  let s:builtin="#71a46c"
-  let s:func="#b680b1"
-  let s:var="#c27d7b"
 
 "   cursors
-  hi CursorLine guibg=#575652 guifg=NONE cterm=none
-  autocmd InsertEnter * hi CursorLine guibg=#606000 cterm=none
-  autocmd InsertLeave * hi CursorLine guibg=#575652 cterm=none
-
   set guicursor=i:ver20-iCursor
   hi iCursor guibg=yellow ctermbg=yellow
+  hi CursorLine guibg=#373632 guifg=NONE cterm=none
+  autocmd InsertEnter * hi CursorLine guibg=#405000 cterm=none
+  autocmd InsertLeave * hi CursorLine guibg=#373632 cterm=none
 
 " basic text
-  exe 'hi Normal guifg='s:fg' guibg='s:dark 
-  exe 'hi Comment guifg='s:fg0  
-  exe 'hi Underlined   gui=underline'
+  exe 'hi Normal guifg='s:white' guibg='s:dark 
+  exe 'hi Comment guifg='s:gray
+  exe 'hi Underlined gui=underline'
+
+" some sort of pigeon hole  
+  exe 'hi Constant guifg='s:brown  
+  exe 'hi Type guifg='s:plum 
+  exe 'hi PreProc guifg='s:plum 
+  exe 'hi Tag guifg='s:purple  
+  exe 'hi Special guifg='s:dgray  
+  exe 'hi NonText guifg='s:dgray' guibg='s:dark 
 
 "   keywords
-  exe 'hi Keyword guifg='s:dblue'  gui=bold'
-  exe 'hi Statement guifg='s:dblue  
-  exe 'hi Conditional guifg='s:dblue  
-  exe 'hi PreProc guifg='s:dblue  
-  exe 'hi Define guifg='s:dblue  
-  exe 'hi Operater guifg='s:dblue  
-  exe 'hi StorageClass guifg='s:dblue
-  hi! link htmlTagName Keyword 
+  exe 'hi Statement guifg='s:purple' gui=bold'
+  hi! link Operator Statement 
 
-"   constants
-  exe 'hi Constant guifg='s:brown  
-  exe 'hi Boolean guifg='s:brown  
-  exe 'hi Character guifg='s:brown  
-  exe 'hi Float guifg='s:brown  
-  exe 'hi Number guifg='s:brown  
-  exe 'hi String guifg='s:brown  
+"  erm  
+  exe 'hi Search guibg='s:pink
+  exe 'hi IncSearch guifg='s:white' guibg='s:dark 
+  exe 'hi Visual guifg='s:dark' guibg='s:orange
+
+" need TODO  
+  " spelling stuff
+  " do i need a signs column?
+  " hard coded variables
+      " cursors, diff 
 
 "   highlights
-  exe 'hi Title guifg='s:fg4'  gui=bold'
-  exe 'hi Function guifg='s:fg4  
-  exe 'hi Identifier guifg='s:fg4'  gui=italic'
-  exe 'hi Todo guibg='s:fg4'  gui=bold'
+  exe 'hi Title guifg='s:brite'  gui=bold'
+  exe 'hi Function guifg='s:brite  
+  exe 'hi Identifier guifg='s:brite'  gui=italic'
+  exe 'hi Todo guifg='s:dark' guibg='s:brown' gui=bold'
 
 "   line numbers and ui
-  exe 'hi LineNr guifg='s:fg0' guibg='s:darker 
-  exe 'hi CursorLineNr guifg='s:fg' guibg='s:dark 
-  exe 'hi VertSplit guifg='s:dark' guibg='s:dark
+  exe 'hi LineNr guifg='s:dgray' guibg='s:darker 
   exe 'hi Folded guifg='s:plum' guibg='s:darker 
+  exe 'hi CursorLineNr guifg='s:gray' guibg='s:dark 
+  exe 'hi VertSplit guifg='s:dark' guibg='s:darker
+  exe 'hi FoldColumn guifg='s:plum' guibg='s:darker 
+  exe 'hi SignColumn guifg='s:plum' guibg='s:darker 
+  
+  exe 'hi PmenuSel guibg='s:dgray 
+  exe 'hi PmenuThumb guibg='s:dgray
+  exe 'hi PmenuSbar guibg='s:darker 
+  exe 'hi Pmenu guifg='s:white' guibg='s:grayish
 
-"  vimwiki
-  exe 'hi VimwikiHeader1 guifg='s:orange' gui=bold'
-  exe 'hi VimwikiHeader2 guifg='s:pink' gui=bold'
-  exe 'hi VimwikiHeader3 guifg='s:fg4' gui=bold'
-  exe 'hi VimwikiHeader4 guifg='s:brown' gui=bold'
-  exe 'hi VimwikiHeader5 guifg='s:purple' gui=bold'
-  exe 'hi VimwikiHeader6 guifg='s:plum' gui=bold'
-  exe 'hi VimwikiLink guifg='s:dblue' gui=bold'
+  exe 'hi WildMenu  guifg='s:white' guibg='s:dgray' gui=bold'  
+  exe 'hi StatusLine guifg='s:white' guibg='s:grayish' gui=none'
+exe
+  exe 'hi Directory guifg='s:brown  
+  exe 'hi MatchParen guifg='s:darker' guibg='s:gray
 
-" sorta
-  exe 'hi Special guifg='s:fg0  
-  exe 'hi MatchParen guifg='s:darker' guibg='s:fg0
-  exe 'hi Visual guifg='s:dark' guibg='s:fg
-  exe 'hi Search guibg='s:fg
-  exe 'hi IncSearch guifg='s:fg' guibg='s:dark 
+" messages
+  exe 'hi MoreMsg guifg='s:orange  
+  exe 'hi WarningMsg guifg='s:orange' guibg='s:darker 
+  exe 'hi Error guifg='s:darker' guibg='s:pink' gui=bold'
   exe 'hi ErrorMsg guifg='s:darker' guibg='s:pink' gui=bold'
   exe 'hi Question guifg='s:orange' guibg='s:dark' gui=bold'
-  exe 'hi WarningMsg guifg='s:fg' guibg='s:orange 
-  exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
-  exe 'hi PmenuSel  guibg='s:bg3 
-  exe 'hi WildMenu  guifg='s:dark' guibg='s:orange  
-  exe 'hi Directory guifg='s:brown  
-  exe 'hi MoreMsg guifg='s:orange  
 
-" dunno really
-  exe 'hi Type guifg='s:plum 
-  exe 'hi NonText guifg='s:bg4' guibg='s:dark 
-  exe 'hi DiffAdd guifg=#000000 guibg=#ddffdd gui=bold'
-  exe 'hi DiffDelete guifg=#ff0000'  
-  exe 'hi DiffChange  guibg='s:bg2
+"  diffy
+  exe 'hi DiffAdd guibg='s:grayish
+  exe 'hi DiffDelete guifg='s:plum' guibg=#500000 gui=none'
+  exe 'hi DiffChange  guibg='s:greenish
   exe 'hi DiffText guifg=#000000 guibg=#ddddff gui=bold'
-  exe 'hi Label guifg='s:var
-  exe 'hi Tag guifg='s:dblue  
-  " exe 'hi CursorColumn  guibg='s:bg2 
-  " exe 'hi ColorColumn  guibg='s:bg2 
 
-" lanuage specific
+"  vimwiki is changed
+  exe 'hi VimwikiLink guifg='s:purple' gui=bold'
+  exe 'hi VimwikiHeader1 guifg='s:orange' gui=bold'
+  exe 'hi VimwikiHeader2 guifg='s:pink' gui=bold'
+  exe 'hi VimwikiHeader3 guifg='s:brite' gui=bold'
+  exe 'hi VimwikiHeader4 guifg='s:brown' gui=bold'
+  exe 'hi VimwikiHeader5 guifg='s:eggplant' gui=bold'
+  exe 'hi VimwikiHeader6 guifg='s:plum' gui=bold'
+
+" ch-ch-ch changes  
+  exe 'hi ChangesSignTextAdd guifg='s:dgray' guibg='s:darker
+  exe 'hi ChangesSignTextDel guifg='s:dgray' guibg='s:darker
+  exe 'hi ChangesSignTextCh guifg='s:dgray' guibg='s:darker
+
+
+"  markology
+  exe 'hi MarkologyHLl guifg='s:plum' guibg='s:darker
+  exe 'hi MarkologyHLo guifg='s:dgray' guibg='s:darker
+  exe 'hi MarkologyHLLine guifg='s:white' guibg='s:grape
+
+  "   MarkologyHLl  : This group is used to highlight all the lowercase marks.
+  "   MarkologyHLu  : This group is used to highlight all the uppercase marks.
+  "   MarkologyHLo  : This group is used to highlight all other marks.
+  "   MarkologyHLm  : This group is used when multiple marks are on the same line.
+  "   MarkologyHLLine : This group is used to highlight lines if line-highlighting is selected.
+
+" language specific
   " Python Highlighting
-  exe 'hi pythonBuiltinFunc guifg='s:builtin
+  exe 'hi pythonBuiltin guifg='s:purple
+  " exe 'hi pythonBuiltinFunc guifg='s:purple
 
-  " Javascript Highlighting
-  exe 'hi jsBuiltins guifg='s:builtin
-  exe 'hi jsFunction guifg='s:dblue' gui=bold'
+  " Javascript Highlighting  
+  exe 'hi jsBuiltins guifg='s:purple
+  exe 'hi jsFunction guifg='s:purple' gui=bold'
   exe 'hi jsGlobalObjects guifg='s:plum
-  exe 'hi jsAssignmentExps guifg='s:var
+  exe 'hi jsAssignmentExps guifg='s:purple
 
   " Html Highlighting
-  exe 'hi htmlLink guifg='s:fg' gui=underline'
-  exe 'hi htmlStatement guifg='s:dblue
-  exe 'hi htmlSpecialTagName guifg='s:dblue
+  hi! link htmlTagName Statement 
+  hi! link htmlTag Statement 
+  hi! link htmlEndTag Statement 
+  exe 'hi htmlLink guifg='s:white' gui=underline'
+  exe 'hi htmlSpecialTagName guifg='s:purple
 
-  " Markdown Highlighting
-  exe 'hi mkdCode guifg='s:builtin
+  " Markdown Highlighting  
+  exe 'hi mkdCode guifg='s:purple
 

@@ -10,7 +10,7 @@
   set t_Co=256
   set background=dark
   hi clear
-  let g:colors_name = "gravy"
+  let g:colors_name = "gravy3"
 
 " set colour variables
   let s:darker="#5d544e"
