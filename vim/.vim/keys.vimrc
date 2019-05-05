@@ -53,7 +53,6 @@
   map <Leader>n :NERDTreeToggle<CR>
   map <silent> <Leader>st :Startify<CR>
 
-
 " --- symbology ---
   imap 11 ❢  
   imap 66  
