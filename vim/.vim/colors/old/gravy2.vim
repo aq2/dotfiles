@@ -14,7 +14,7 @@
   let s:purple="#7f749d"
   let s:plum="#b76690"
   let s:brown= "#b09676"
-  let s:orange="#f88330"
+  let s:orange="#c8764a"
   let s:pink="#f83070"
 
   let s:darker="#2d241e"
@@ -24,8 +24,8 @@
   let s:white="#b59784"
   let s:brite="#c5aa9a"
 
-  let s:greenish='#3D2D20'
-  let s:grayish='#392E27'
+  let s:greenish='#2d3d20'
+  let s:grayish='#392e27'
   
 
 "   cursors
@@ -53,15 +53,14 @@
   hi! link Operator Statement 
 
 "  erm  
-  exe 'hi Search guibg='s:pink
+  exe 'hi Search guibg='s:orange
   exe 'hi IncSearch guifg='s:white' guibg='s:dark 
   exe 'hi Visual guifg='s:dark' guibg='s:orange
 
 " need TODO  
   " spelling stuff
+  " pigeonholers?
   " do i need a signs column?
-  " hard coded variables
-      " cursors, diff 
 
 "   highlights
   exe 'hi Title guifg='s:brite'  gui=bold'
@@ -84,7 +83,7 @@
 
   exe 'hi WildMenu  guifg='s:white' guibg='s:dgray' gui=bold'  
   exe 'hi StatusLine guifg='s:white' guibg='s:grayish' gui=none'
-exe
+  
   exe 'hi Directory guifg='s:brown  
   exe 'hi MatchParen guifg='s:darker' guibg='s:gray
 
@@ -97,9 +96,9 @@ exe
 
 "  diffy
   exe 'hi DiffAdd guibg='s:grayish
-  exe 'hi DiffDelete guifg='s:plum' guibg=#500000 gui=none'
+  exe 'hi DiffDelete guifg='s:plum' guibg='s:pink' gui=none'
   exe 'hi DiffChange  guibg='s:greenish
-  exe 'hi DiffText guifg=#000000 guibg=#ddddff gui=bold'
+  exe 'hi DiffText guifg='s:pink' guibg='s:purple' gui=bold'
 
 "  vimwiki is changed
   exe 'hi VimwikiLink guifg='s:purple' gui=bold'

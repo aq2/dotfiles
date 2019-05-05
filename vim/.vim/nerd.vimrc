@@ -40,3 +40,6 @@
   let NERDTreeQuitOnOpen=1
   let NERDTreeShowBookmarks=1
   let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
+  let g:NERDTreeStatusline = '%#NonText#'
+  
+  autocmd FileType tagbar,nerdtree setlocal signcolumn=no

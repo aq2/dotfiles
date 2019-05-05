@@ -1,6 +1,6 @@
 "   change text size
-  command! Bigger  let &guifont = substitute(&guifont, '\d\+', '\=submatch(0)+1', '')
-  command! Smaller let &guifont = substitute(&guifont, '\d\+', '\=submatch(0)-1', '')
+  command! Bigger  let &guifont = substitute(&guifont, '\d\+', '\=submatch(0)+2', '')
+  command! Smaller let &guifont = substitute(&guifont, '\d\+', '\=submatch(0)-2', '')
 
 "... zoom/restore window.
   function! s:ZoomToggle() abort
@@ -21,7 +21,8 @@
 "... make folds a wee bit more interesting
   function! MyFoldText()
     let foldsize = (v:foldend-v:foldstart)
-    return '▾  '.getline(v:foldstart).'      ∘       ('.foldsize.' lines)   '. repeat('    ∘    ', 29)
+    return '▾  '.getline(v:foldstart).'     ∘      ('.foldsize.' lines)   '. repeat('   ∘   ', 29)
+    " return '▾  '.getline(v:foldstart).'      ∘       ('.foldsize.' lines)   '. repeat('    ∘    ', 29)
   endfunction
   set foldtext=MyFoldText()
 

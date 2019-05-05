@@ -24,6 +24,7 @@
   let g:startify_custom_header = map(startify#fortune#boxed(), '"    ".v:val')
 
   autocmd User StartifyReady set laststatus=0
+  autocmd User StartifyReady set noruler
   autocmd User StartifyReady setlocal cursorline
   autocmd User StartifyBufferOpened set laststatus=2
 
@@ -43,6 +44,7 @@
   function! s:goyo_enter()
     let g:goyo = 1
     set showtabline=0
+    set signcolumn=no
   endfunction
 
   function! s:goyo_leave()
@@ -67,6 +69,9 @@
   let g:SexyScroller_MaxTime = 100
   let g:SexyScroller_EasingStyle = 2
 
+  let g:changes_fast = 0 
   let g:changes_use_icons = 0
   let g:changes_respect_SignColumn = 1
+
+  let markology_hlline_lower = 1  
 

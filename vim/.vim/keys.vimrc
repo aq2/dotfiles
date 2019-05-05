@@ -1,19 +1,14 @@
-" --- keyboard mapping ---
+" --- vim keyboard mapping ---
  
 " --- Quickly edit/reload dotfiles ---
+  nmap <leader>ez :e ~/.zshrc<CR>
   nmap <silent> <leader>ev :e $MYVIMRC<CR>
   nmap <silent> <leader>sv :so $MYVIMRC<CR>
-  nmap <leader>ez :e ~/.zshrc<CR>
 
 " --- navigation ---
   " scroll wrapped lines naturally
   nnoremap j gj
   nnoremap k gk
-
-  " using $ for end of line is dumb - use 9 or b/e
-  " nnoremap b ^
-  nnoremap 9 $
-  " nnoremap e $
 
   "  leader Tab switches windows and sets pwd
   map <leader><Tab> <C-W>W:cd %:p:h<CR>:<CR>
@@ -32,15 +27,15 @@
   nnoremap <Space> li
   nnoremap <Del> i<Del>
 
+  cmap qq qa!
   cmap Q q<CR>
   cmap waq wqa<CR>
-  cmap qq qa!
 
   " .... old habits die hard
-  inoremap <C-v> <ESC>"+pa
   vnoremap <C-c> "+y
   vnoremap <C-d> "+d
   nnoremap <C-s> :w<CR>
+  inoremap <C-v> <ESC>"+pa
 
   " highlight last inserted text
   nnoremap gV `[v`]
@@ -49,51 +44,37 @@
   cmap w!! w !sudo tee % >/dev/null
 
 " --- pluginz ---
-  map <Leader>n :NERDTreeToggle<CR>
-  map <Leader>g :Goyo<CR>
-  map <Leader>l :Limelight!!<CR>
-  map <Leader>hl :nohl<CR>
-  map <silent> <Leader>st :Startify<CR>
-  nnoremap <Leader>r :MRU<CR>
   map <Leader>ec :EC<CR>
+  map <Leader>g :Goyo<CR>
+  map <Leader>hl :nohl<CR>
+  nnoremap <Leader>r :MRU<CR>
+  map <Leader>l :Limelight!!<CR>
   map <Leader>mu  :MundoToggle<CR>
+  map <Leader>n :NERDTreeToggle<CR>
+  map <silent> <Leader>st :Startify<CR>
 
-  ab wt :VimwikiTable
-  
-  map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-
-  nnoremap <Leader>f :FZF<CR>
-  nnoremap <Leader>! :FZF!<CR>
-  nnoremap <C-p> :<C-u>FZF<CR>
-
-  " map <Leader>m <C-h><C-h> 
-
-  nmap <Leader># gcc
 
 " --- symbology ---
-  imap -> <C-k>->
-  imap -. <C-k>->
-  imap -= <C-k>-> 
-  imap => <C-k>=>
-  imap <- <C-k><-
-  imap ,- <C-k><-
+  imap 11 ❢  
+  imap 66  
+  imap 77  
   imap :) 😃
   imap :( 😕
-  imap *** *         *           *           *           *
   imap qw ❓
-  imap omg 😱
   imap ==  
   imap --  
   imap //  
   imap 88  
-  imap 11 ❢  
-  imap idee  
-  imap 66  
-  imap 77  
   imap hh 
-" 🎬💰💻🖥😺😸😀😱🙀😕😀😁😃
-"            😀😃😁😄😾
+  imap omg 😱
+  imap idee  
+  imap -> <C-k>->
+  imap -. <C-k>->
+  imap -= <C-k>-> 
+  imap <- <C-k><-
+  imap ,- <C-k><-
+
+  "            
 
 
 " --- bubbles ---
@@ -107,23 +88,8 @@
   vmap <S-Down> xp`[V`]
   imap <S-Up> <ESC>xkP`[V`]i
   imap <S-Down> <ESC>xp`[V`]
- 
 
-
-" " --- marks ---
-"   " mark/unmark line  \l marks line, 'l returns to marked line, :match to clear
-"   nnoremap <silent> <Leader>k mk:execute 'match Search /\%'.line('.').'l/'<CR>
-"   " nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
-"   " \p = permanent marker
-"   nnoremap <silent> <Leader>p :exe "let m = matchadd('WildMenu','\\%" . line('.') . "l')"<CR>
-"   " \q clears all, perms and temps
-"   nnoremap <silent> <Leader>q :call clearmatches()<CR>
-
-
-  " --- cancel task in vimwiki
-  nmap <A-c> glx>
-
-
+" syntax stuff
   nmap <leader>sp :call <SID>SynStack()<CR>
   function! <SID>SynStack()
     if !exists("*synstack")
@@ -136,4 +102,28 @@
   map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
   \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
   \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+"   new ones to learn  
+
+  ab mru :MRU
+  ab wt :VimwikiTable
+
+  nmap <Leader># <Plug>Commentary
+  
+  " \a does copy/paste/comment in normal and viz too 😃
+  nmap <Leader>a  yypgcck
+  xmap <silent> <leader>a yjpgV<Plug>Commentary<CR>
+  
+  nnoremap <Leader>q :bd<CR>
+  map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+  " using $ for end of line is dumb - use END for end of line
+  " or D for d$
+
+  " hilite changed lines
+  nnoremap <Leader>ch :EC<CR>:CT<CR>
+  nnoremap <Leader>sc :set scl=no<CR>m1
+
+  nnoremap <Leader>! :FZF!<CR>
+  nnoremap <C-p> :<C-u>FZF<CR>
 

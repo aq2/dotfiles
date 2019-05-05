@@ -9,6 +9,6 @@ window#vim-main-window {
 VteTerminal,
 TerminalScreen,
 vte-terminal {
-    padding: 5px 5px 5px 5px;
-    -VteTerminal-inner-border: 5px 5px 5px 5px;
+    padding: 9px 5px 9px 17px;
+    -VteTerminal-inner-border: 9px 5px 9px 17px;
 }

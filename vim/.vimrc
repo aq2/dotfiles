@@ -5,7 +5,8 @@
   syntax on
   set backspace=2
   set nocompatible
-  colorscheme gravy2
+  set signcolumn=no
+  colorscheme gravy
   set background=dark
   set ttyfast termguicolors
   set splitbelow splitright
@@ -57,7 +58,7 @@
 "  netrw obviously
   let g:netrw_banner = 0
   let g:netrw_winsize = 25
-  let g:netrw_dirhistmax=0
+  let g:netrw_dirhistmax = 0
   let g:netrw_liststyle = 3
 
 
@@ -68,3 +69,4 @@
   source $HOME/.vim/autocommands.vimrc
   source $HOME/.vim/plugin-settings.vimrc
 
+  " colorscheme gravy
