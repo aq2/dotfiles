@@ -63,7 +63,7 @@
 "   line numbers and ui
   exe 'hi Folded guifg='s:plum' guibg='s:darker
   exe 'hi LineNr guifg='s:dgray' guibg='s:darker
-  exe 'hi VertSplit guifg='s:dark' guibg='s:darker
+  exe 'hi VertSplit guifg='s:darker' guibg='s:darker
   exe 'hi CursorLineNr guifg='s:gray' guibg='s:dark
   exe 'hi FoldColumn guifg='s:plum' guibg='s:darker
   exe 'hi SignColumn guifg='s:plum' guibg='s:darker
@@ -135,3 +135,25 @@
   " Markdown Highlighting 
   exe 'hi mkdCode guifg='s:purple
 
+  exe 'hi fTest guibg='s:darker
+
+" nerd
+  exe  'hi NERDTreeDir guifg='s:purple 
+
+
+"→→→ fzf
+  let g:fzf_colors = {
+    \ 'fg':      ['fg', 'Normal'],
+    \ 'bg':      ['bg', 'PMenu'],
+    \ 'hl':      ['fg', 'Comment'],
+    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'PreProc'],
+    \ 'border':  ['fg', 'Ignore'],
+    \ 'prompt':  ['fg', 'Conditional'],
+    \ 'pointer': ['fg', 'Exception'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Label'],
+    \ 'header':  ['fg', 'Comment'] 
+  \ }

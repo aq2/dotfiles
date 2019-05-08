@@ -6,11 +6,11 @@
   endif
 
   call plug#begin('~/.vim/plugged')
-    "Plug 'digitaltoad/vim-pug'
+    " Plug 'digitaltoad/vim-pug'
     Plug 'chrisbra/changesPlugin'
     Plug 'ervandew/supertab' 
     Plug 'hail2u/vim-css3-syntax'
-    "Plug 'iloginow/vim-stylus'
+    " Plug 'iloginow/vim-stylus'
     Plug 'itchyny/lightline.vim'
     Plug 'itchyny/vim-gitbranch'
     Plug 'jeetsukumaran/vim-markology'

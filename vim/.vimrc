@@ -20,7 +20,7 @@
   set hidden autoread
   set ambiwidth=double
   set virtualedit=block
-  set updatetime=100 ttimeoutlen=20
+  set timeout updatetime=100 ttimeoutlen=20
   set clipboard^=unnamed,unnamedplus
 
   set linebreak

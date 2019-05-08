@@ -11,8 +11,8 @@
   nnoremap k gk
 
   "  leader Tab switches windows and sets pwd
-  map <leader><Tab> <C-W>W:cd %:p:h<CR>:<CR>
   nmap <Tab> <Plug>VimwikiNextLink
+  map <leader><Tab> <C-W>W:cd %:p:h<CR>:<CR>
 
   " remap arrow keys to scroll buffers
   nnoremap <S-Left> :bprev<CR>
@@ -43,23 +43,31 @@
   " w!! let's you sudo save a file
   cmap w!! w !sudo tee % >/dev/null
 
-" --- pluginz ---
-  map <Leader>ec :EC<CR>
+
+" --- pluginz/leaderz ---
   map <Leader>g :Goyo<CR>
-  map <Leader>hl :nohl<CR>
-  nnoremap <Leader>r :MRU<CR>
+  nnoremap <Leader>m :MRU<CR>
   map <Leader>l :Limelight!!<CR>
-  map <Leader>mu  :MundoToggle<CR>
-  map <silent> <Leader>n :NERDTreeToggle<CR>
+  map <Leader>u  :MundoToggle<CR>
   map <silent> <Leader>st :Startify<CR>
+  nmap <Leader>r <Plug>RefreshColorScheme
+  map <silent> <Leader>n :NERDTreeToggle<CR>
+  nmap <Leader>cm :EC<CR>:CT<CR>:MarkologyDisable<CR>:MarkologyEnable<CR>
 
-  " leader f for fuzzy search any directory
-  nnoremap <Leader>f :FZF!<CR>
-
-  " Ctrl-p to search current directoy
-  nnoremap <C-p> :<C-u>FZF<CR
-  " nnoremap <C-p> :cd ~<CR>>:<C-u>FZF<CR>
-
+  " leader f for side/bottom pane 
+  nnoremap <Leader>f :FZF<CR>
+  nnoremap <Leader>\ :FZF<CR>
+  " leader p to search ~
+  nnoremap <Leader>p :FZF ~<CR>
+  
+  " \# does copy/paste/comment in norm and viz modes too 😃
+  nmap <Leader>#  yypgcck
+  xmap <silent> <leader># yjpgV<Plug>Commentary<CR>
+  
+  nnoremap <Leader>q :bd<CR>
+  nnoremap <Leader>hl :nohl<CR>
+  map <leader>cd :cd %:p:h<cr>:pwd<cr>
+  
 
 " --- symbology ---
   imap 11 ❢  
@@ -81,7 +89,7 @@
   imap <- <C-k><-
   imap ,- <C-k><-
 
-  "            
+  "         
 
 
 " --- bubbles ---
@@ -90,6 +98,7 @@
   imap <S-Up> <ESC>ddkPi
   nmap <S-Down> ddp
   imap <S-Down> <ESC>ddpi
+  
   " Bubble multiple lines
   vmap <S-Up> xkP`[V`]
   vmap <S-Down> xp`[V`]
@@ -97,14 +106,13 @@
   imap <S-Down> <ESC>xp`[V`]
 
 " syntaxy stuff
-  nmap <leader>sp :call <SID>SynStack()<CR>
-  function! <SID>SynStack()
-    if !exists("*synstack")
-      return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-  endfunc
-
+  " nmap <leader>sp :call <SID>SynStack()<CR>
+  " function! <SID>SynStack()
+  "   if !exists("*synstack")
+  "     return
+  "   endif
+  "   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  " endfunc
 
   map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
   \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -115,19 +123,6 @@
   ab mru :MRU
   ab wt :VimwikiTable
 
-  nmap <Leader># <Plug>Commentary
-  
-  " \a does copy/paste/comment in normal and viz too 😃
-  nmap <Leader>a  yypgcck
-  xmap <silent> <leader>a yjpgV<Plug>Commentary<CR>
-  
-  nnoremap <Leader>q :bd<CR>
-  map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
   " using $ for end of line is dumb - use END for end of line
   " or D for d$
-
-  " hilite changed lines
- 
-  nmap <Leader>cm :EC<CR>:CT<CR>:MarkologyDisable<CR>:MarkologyEnable<CR>
 
