@@ -23,7 +23,7 @@
     let foldsize = (v:foldend-v:foldstart)
     return '▾  '.getline(v:foldstart).'     ∘      ('.foldsize.' lines)   '. repeat('   ∘   ', 29)
   endfunction
-  
+
   set foldtext=MyFoldText()
 
 
@@ -32,8 +32,6 @@
 
 
 " --- change colorscheme ---
-  nnoremap <silent> <leader>cc :call ToggleColours()<CR>
-
   function! ToggleColours()
     if g:colors_name == 'gravy'
       colo bubblegum-256-light
@@ -41,3 +39,7 @@
       colo gravy
     endif
   endfunction
+
+  nnoremap <silent> <leader>cc :call ToggleColours()<CR>
+
+

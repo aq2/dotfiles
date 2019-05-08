@@ -1,5 +1,5 @@
 " --- vim keyboard mapping ---
- 
+
 " --- Quickly edit/reload dotfiles ---
   nmap <leader>ez :e ~/.zshrc<CR>
   nmap <silent> <leader>ev :e $MYVIMRC<CR>
@@ -54,23 +54,23 @@
   map <silent> <Leader>n :NERDTreeToggle<CR>
   nmap <Leader>cm :EC<CR>:CT<CR>:MarkologyDisable<CR>:MarkologyEnable<CR>
 
-  " leader f for side/bottom pane 
+  " leader f for side/bottom pane
   nnoremap <Leader>f :FZF<CR>
   nnoremap <Leader>\ :FZF<CR>
   " leader p to search ~
   nnoremap <Leader>p :FZF ~<CR>
-  
+
   " \# does copy/paste/comment in norm and viz modes too 😃
   nmap <Leader>#  yypgcck
   xmap <silent> <leader># yjpgV<Plug>Commentary<CR>
-  
+
   nnoremap <Leader>q :bd<CR>
   nnoremap <Leader>hl :nohl<CR>
   map <leader>cd :cd %:p:h<cr>:pwd<cr>
-  
+
 
 " --- symbology ---
-  imap 11 ❢  
+  imap 11 ❢ 
   imap 66  
   imap 77  
   imap :) 😃
@@ -85,12 +85,11 @@
   imap idee  
   imap -> <C-k>->
   imap -. <C-k>->
-  imap -= <C-k>-> 
+  imap -= <C-k>->
   imap <- <C-k><-
   imap ,- <C-k><-
 
-  "         
-
+  "       
 
 " --- bubbles ---
   " Bubble single lines
@@ -98,7 +97,7 @@
   imap <S-Up> <ESC>ddkPi
   nmap <S-Down> ddp
   imap <S-Down> <ESC>ddpi
-  
+
   " Bubble multiple lines
   vmap <S-Up> xkP`[V`]
   vmap <S-Down> xp`[V`]
@@ -118,11 +117,17 @@
   \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
   \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-"   new ones to learn  
+"   new ones to learn
 
   ab mru :MRU
   ab wt :VimwikiTable
 
   " using $ for end of line is dumb - use END for end of line
   " or D for d$
+
+" trailer trash
+
+  nnoremap <F12> :Trailer<CR>
+  nnoremap <S-F12> :TrailerTrim<CR>
+  vnoremap <S-F12> :TrailerTrim<CR>
 

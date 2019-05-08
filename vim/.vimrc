@@ -25,7 +25,8 @@
 
   set linebreak
   set showbreak=˜
-  set fillchars=vert:\ 
+  set fillchars=""
+  " set fillchars=vert:\
   set autoindent copyindent
   filetype plugin indent on
   set wrap whichwrap+=<,>,[,]
@@ -33,8 +34,14 @@
   set tabstop=2 softtabstop=2 expandtab
 
   " set list shows whitespace characters if you wanna
-  " set list listchars=tab:‥\ ,trail:˙,nbsp:␣
-
+  " set list listchars=tab:‥\ ,trail:˙
+  " set list!
+  " set list listchars=tab:»·\,trail:·
+  " set list listchars=tab:>-,trail:.,extends:>
+  " Enter the middle-dot by pressing Ctrl-k then .M
+  " set listchars=tab:\|_,trail:·
+  " Enter the right-angle-quote by pressing Ctrl-k then >>
+  " set list listchars=tab:»·,trail:·,nbsp:␣
 
   set path+=**
   set gdefault

@@ -21,6 +21,7 @@
     Plug 'junegunn/fzf', { 'dir': '~/.config/fzf', 'do': './install --all' }
     Plug 'mattn/emmet-vim'
     Plug 'mgee/lightline-bufferline'
+    Plug 'csexton/trailertrash.vim'
     Plug 'mhinz/vim-startify'
     Plug 'pangloss/vim-javascript'
     Plug 'scrooloose/nerdtree'

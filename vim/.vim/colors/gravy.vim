@@ -27,7 +27,7 @@
 
   let s:greenish='#1d2d10'
   let s:grayish='#392e27'
-  
+
 
 "   cursors
   set guicursor=i:ver20-iCursor
@@ -52,7 +52,7 @@
 "  erm
   exe 'hi Search guibg='s:orange
   exe 'hi Visual guifg='s:dark' guibg='s:orange
-  exe 'hi IncSearch guifg='s:white' guibg='s:dark 
+  exe 'hi IncSearch guifg='s:white' guibg='s:dark
 
 "   highlights
   exe 'hi Function guifg='s:brite
@@ -67,7 +67,7 @@
   exe 'hi CursorLineNr guifg='s:gray' guibg='s:dark
   exe 'hi FoldColumn guifg='s:plum' guibg='s:darker
   exe 'hi SignColumn guifg='s:plum' guibg='s:darker
-  
+
   exe 'hi PmenuSel guibg='s:dgray
   exe 'hi PmenuThumb guibg='s:dgray
   exe 'hi PmenuSbar guibg='s:darker
@@ -75,7 +75,7 @@
 
   exe 'hi WildMenu guifg='s:white' guibg='s:dgray' gui=bold'
   exe 'hi StatusLine guifg='s:white' guibg='s:grayish' gui=none'
-  
+
   exe 'hi Directory guifg='s:brown
   exe 'hi MatchParen guifg='s:darker' guibg='s:gray
 
@@ -112,7 +112,6 @@
   exe 'hi MarkologyHLo guifg='s:dgray' guibg='s:darker
   exe 'hi MarkologyHLLine guifg='s:white' guibg='s:dgrape
 
-  "   MarkologyHLm  : multiple marks on same line.
 
 " language specific
   " Python Highlighting
@@ -135,11 +134,12 @@
   " Markdown Highlighting 
   exe 'hi mkdCode guifg='s:purple
 
-  exe 'hi fTest guibg='s:darker
 
 " nerd
-  exe  'hi NERDTreeDir guifg='s:purple 
+  exe  'hi NERDTreeDir guifg='s:purple
 
+" TrailerTrash
+  exe 'hi UnwantedTrailerTrash guibg='s:grape
 
 "→→→ fzf
   let g:fzf_colors = {
@@ -155,5 +155,6 @@
     \ 'pointer': ['fg', 'Exception'],
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
-    \ 'header':  ['fg', 'Comment'] 
+    \ 'header':  ['fg', 'Comment']
   \ }
+
