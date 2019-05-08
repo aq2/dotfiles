@@ -1,11 +1,12 @@
 " → init plug plugin
   source $HOME/.vim/plug.vimrc
 
+
 "  general settings
   syntax on
   set backspace=2
   set nocompatible
-  set signcolumn=no
+  " set signcolumn=no
   colorscheme gravy
   set background=dark
   set ttyfast termguicolors
@@ -34,10 +35,13 @@
   " set list shows whitespace characters if you wanna
   " set list listchars=tab:‥\ ,trail:˙,nbsp:␣
 
+
   set path+=**
   set gdefault
   set showmatch
+  set completeopt=longest,menuone
   set ignorecase hlsearch incsearch
+  set omnifunc=syntaxcomplete#Complete
   set wildmenu wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*/Music/*,*/Pictures/*
 
   set viminfo+=n~/.vim/tmp/viminfo
@@ -69,4 +73,3 @@
   source $HOME/.vim/autocommands.vimrc
   source $HOME/.vim/plugin-settings.vimrc
 
-  " colorscheme gravy

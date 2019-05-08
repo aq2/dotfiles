@@ -1,6 +1,5 @@
   source ~/dotfiles/vim/.vim/colors/gravyLine.vim
-  " source ~/dotfiles/vim/.vim/colors/gravyLine3.vim
-
+  
   let g:lightline = {
       \ 'colorscheme': 'gravyLine',
       \ 'component_function': {
@@ -14,6 +13,8 @@
       \ 'inactive': {},
   \ }
   
+  " can we change left?
+  " rtfm and do the tutorial!
 
   let g:lightline#bufferline#modified  = ' 😱'
   let g:lightline#bufferline#read_only  = ' '

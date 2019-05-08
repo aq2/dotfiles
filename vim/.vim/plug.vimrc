@@ -8,6 +8,7 @@
   call plug#begin('~/.vim/plugged')
     "Plug 'digitaltoad/vim-pug'
     Plug 'chrisbra/changesPlugin'
+    Plug 'ervandew/supertab' 
     Plug 'hail2u/vim-css3-syntax'
     "Plug 'iloginow/vim-stylus'
     Plug 'itchyny/lightline.vim'
@@ -19,7 +20,6 @@
     Plug 'junegunn/limelight.vim'
     Plug 'junegunn/fzf', { 'dir': '~/.config/fzf', 'do': './install --all' }
     Plug 'mattn/emmet-vim'
-    " Plug 'maxboisvert/vim-simple-complete'
     Plug 'mgee/lightline-bufferline'
     Plug 'mhinz/vim-startify'
     Plug 'pangloss/vim-javascript'

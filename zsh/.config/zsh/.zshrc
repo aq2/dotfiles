@@ -35,17 +35,18 @@
 
   source "/home/angelo/.config/fzf/shell/key-bindings.zsh"
   export FZF_DEFAULT_OPS="--layout=reverse-list ---layout=reverse --border"
-  #export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-  [[ $- == *i* ]] && source "/home/angelo/.config/fzf/shell/completion.zsh" 2> /dev/null
-  export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
+  export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git -L'
+
+  # export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
+  # export FZF_DEFAULT_COMMAND="find -L"
 
 
 # misc
-  autoload -U compinit && compinit
-  source /home/angelo/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   zstyle ':completion:*' menu select
+  autoload -U compinit && compinit -d ~/.config/zsh/tmp/zcompdump
+  [[ $- == *i* ]] && source "/home/angelo/.config/fzf/shell/completion.zsh" 2> /dev/null
+  source /home/angelo/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   
-
   function take() {
     mkdir -p $1
     cd $1
@@ -68,4 +69,5 @@
   alias upg="apt list --upgradable"
   alias blame='systemd-analyze blame'
   alias glog='git log --pretty="%Cgreen%h  %Cblue%ar%Creset  %s"'
+
 

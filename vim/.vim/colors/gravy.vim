@@ -88,18 +88,18 @@
 
 "  diffy
   exe 'hi DiffAdd guibg='s:greenish
-  exe 'hi DiffChange  guibg='s:grayish
+  exe 'hi DiffChange guibg='s:grayish
   exe 'hi DiffText guifg='s:pink' guibg='s:purple' gui=bold'
   exe 'hi DiffDelete guifg='s:plum' guibg='s:darker' gui=none'
 
 "  vimwiki is changed
   exe 'hi VimwikiLink guifg='s:purple' gui=bold'
-  exe 'hi VimwikiHeader1 guifg='s:orange' gui=bold'
-  exe 'hi VimwikiHeader2 guifg='s:pink' gui=bold'
-  exe 'hi VimwikiHeader3 guifg='s:brite' gui=bold'
-  exe 'hi VimwikiHeader4 guifg='s:brown' gui=bold'
-  exe 'hi VimwikiHeader5 guifg='s:eggplant' gui=bold'
-  exe 'hi VimwikiHeader6 guifg='s:plum' gui=bold'
+  exe 'hi VimwikiHeader1 guifg='s:brite' gui=bold'
+  exe 'hi VimwikiHeader2 guifg='s:orange' gui=bold'
+  exe 'hi VimwikiHeader3 guifg='s:brown' gui=bold'
+  exe 'hi VimwikiHeader4 guifg='s:plum' gui=bold'
+  exe 'hi VimwikiHeader5 guifg='s:pink' gui=bold'
+  exe 'hi VimwikiHeader6 guifg='s:eggplant' gui=bold'
 
 " ch-ch-ch changes
   exe 'hi ChangesSignTextCh guifg='s:dgray' guibg='s:darker
@@ -107,14 +107,11 @@
   exe 'hi ChangesSignTextDel guifg='s:dgray' guibg='s:darker
 
 "  markology
-  exe 'hi MarkologyHLl guifg='s:plum' guibg='s:darker
+  exe 'hi MarkologyHLl guifg='s:gray' guibg='s:darker
+  exe 'hi MarkologyHLu guifg='s:gray' guibg='s:darker
   exe 'hi MarkologyHLo guifg='s:dgray' guibg='s:darker
   exe 'hi MarkologyHLLine guifg='s:white' guibg='s:dgrape
 
-  "   MarkologyHLl  : lowercase marks.
-  "   MarkologyHLu  : uppercase marks.
-  "   MarkologyHLo  : all other marks.
-  "   MarkologyHLLine : highlight linesd.
   "   MarkologyHLm  : multiple marks on same line.
 
 " language specific

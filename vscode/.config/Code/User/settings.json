@@ -25,7 +25,7 @@
   "terminal.integrated.fontFamily": "Monaco",
   "editor.cursorBlinking": "smooth",
   "editor.cursorWidth": 3,
-  "editor.fontFamily": "'Operator Mono Book', 'Monaco', 'Fira Code'",
+  "editor.fontFamily": "'Fantasque Sans Mono'",
   "editor.fontLigatures": true,
   "editor.fontSize": 23,
   "editor.formatOnPaste": true,
@@ -239,7 +239,6 @@
   },
   "workbench.activityBar.visible": true,
   "workbench.settings.openDefaultSettings": false,
-  "workbench.colorTheme": "AQnob",
   "editor.formatOnSave": true,
   "editor.codeLens": false,
   "[python]": {
@@ -257,5 +256,6 @@
   "window.enableMenuBarMnemonics": false,
   "debug.allowBreakpointsEverywhere": true,
   "terminal.integrated.enableBell": true,
-  "update.enableWindowsBackgroundUpdates": false
+  "update.enableWindowsBackgroundUpdates": false,
+  "numberedBookmarks.backgroundLineColor": "#b000b5"
 }

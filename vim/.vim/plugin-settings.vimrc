@@ -11,8 +11,8 @@
   let wiki_1.syntax = 'markdown'
   let g:vimwiki_list = [wiki_1]
 
-  " autocmd BufNewFile *.wiki :r! echo = %:t:r =
-  " autocmd BufNewFile *.wiki :norm kddo
+  " autocmd BufNewFile *.md :r! echo = %:t:r =
+  " autocmd BufNewFile *.md :norm kddo
 
 
 "... startify
@@ -63,7 +63,6 @@
   let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'
 
   let g:user_emmet_install_global = 0
-  " let g:user_emmet_leader_key='<C-M>'
   autocmd FileType html,css EmmetInstall
 
   let g:SexyScroller_MaxTime = 100
@@ -74,4 +73,6 @@
   let g:changes_respect_SignColumn = 1
 
   let markology_hlline_lower = 1  
+  let markology_hlline_upper = 1  
+  let g:markology_ignore_type = "p"
 

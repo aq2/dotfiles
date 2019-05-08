@@ -50,8 +50,16 @@
   nnoremap <Leader>r :MRU<CR>
   map <Leader>l :Limelight!!<CR>
   map <Leader>mu  :MundoToggle<CR>
-  map <Leader>n :NERDTreeToggle<CR>
+  map <silent> <Leader>n :NERDTreeToggle<CR>
   map <silent> <Leader>st :Startify<CR>
+
+  " leader f for fuzzy search any directory
+  nnoremap <Leader>f :FZF!<CR>
+
+  " Ctrl-p to search current directoy
+  nnoremap <C-p> :<C-u>FZF<CR
+  " nnoremap <C-p> :cd ~<CR>>:<C-u>FZF<CR>
+
 
 " --- symbology ---
   imap 11 ❢  
@@ -88,7 +96,7 @@
   imap <S-Up> <ESC>xkP`[V`]i
   imap <S-Down> <ESC>xp`[V`]
 
-" syntax stuff
+" syntaxy stuff
   nmap <leader>sp :call <SID>SynStack()<CR>
   function! <SID>SynStack()
     if !exists("*synstack")
@@ -120,9 +128,6 @@
   " or D for d$
 
   " hilite changed lines
-  nnoremap <Leader>ch :EC<CR>:CT<CR>
-  nnoremap <Leader>sc :set scl=no<CR>m1
-
-  nnoremap <Leader>! :FZF!<CR>
-  nnoremap <C-p> :<C-u>FZF<CR>
+ 
+  nmap <Leader>cm :EC<CR>:CT<CR>:MarkologyDisable<CR>:MarkologyEnable<CR>
 

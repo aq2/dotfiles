@@ -22,8 +22,8 @@
   function! MyFoldText()
     let foldsize = (v:foldend-v:foldstart)
     return '▾  '.getline(v:foldstart).'     ∘      ('.foldsize.' lines)   '. repeat('   ∘   ', 29)
-    " return '▾  '.getline(v:foldstart).'      ∘       ('.foldsize.' lines)   '. repeat('    ∘    ', 29)
   endfunction
+  
   set foldtext=MyFoldText()
 
 
