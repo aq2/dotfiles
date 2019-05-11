@@ -1,4 +1,4 @@
-  source ~/dotfiles/vim/.vim/colors/gravyLine.vim
+  source ~/.vim/colors/gravyLine.vim
   
   let g:lightline = {
       \ 'colorscheme': 'gravyLine',

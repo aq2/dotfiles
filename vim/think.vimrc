@@ -1,4 +1,7 @@
+" not using this, only kept fot historical interest
+
 let hostname = substitute(system('hostname'), '\n', '', '')
+
 
 "  backup/undo
   if hostname == "think"

@@ -192,7 +192,7 @@
   " PINK for object names
   cal <sid>h('htmlTag'          , s:pi , ''   , s:tE , ''   , 'none'      , ''  )
   cal <sid>h('htmlEndTag'       , s:pi , ''   , s:tE , ''   , 'none'      , ''  )
-  
+
   " yellow for funcs
   cal <sid>h('Identifier'       , s:ye , ''   , s:tF , ''   , 'none'      , ''  )
   cal <sid>h('Function'         , s:ye , ''   , s:tF , ''   , 'none'      , ''  )

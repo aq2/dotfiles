@@ -16,10 +16,10 @@
 
 
 "... startify
-  let g:startify_files_number = 8 
+  let g:startify_files_number = 8
   let g:startify_change_to_dir = 1
   let g:startify_enable_special = 0
-  " let g:startify_session_dir = '~/.vim/tmp/session'
+  let g:startify_session_dir = '~/.vim/tmp/session'
   let g:startify_bookmarks = [ {'w': '~/vimwiki/index.md'} ]
   let g:startify_custom_header = map(startify#fortune#boxed(), '"    ".v:val')
 
@@ -59,7 +59,7 @@
 "... misc
   let MRU_Add_Menu = 0
   let MRU_Window_Height = 10
-  " let MRU_File = '~/.vim/tmp/vim_mru_files'
+  let MRU_File = '/home/angelo/dotfiles/vim/vim_mru_files'
   let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'
 
   let g:user_emmet_install_global = 0
@@ -68,12 +68,12 @@
   let g:SexyScroller_MaxTime = 100
   let g:SexyScroller_EasingStyle = 2
 
-  let g:changes_fast = 0 
+  let g:changes_fast = 0
   let g:changes_use_icons = 0
   let g:changes_respect_SignColumn = 1
 
-  let markology_hlline_lower = 1  
-  let markology_hlline_upper = 1  
+  let markology_hlline_lower = 1
+  let markology_hlline_upper = 1
   let g:markology_ignore_type = "p"
 
 
@@ -81,4 +81,4 @@
   autocmd  FileType fzf set laststatus=0 noshowmode noruler
     \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
-let g:fzf_layout = { 'left': '~25%' }
+  let g:fzf_layout = { 'left': '~25%' }

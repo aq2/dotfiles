@@ -2,8 +2,8 @@
 
 " --- Quickly edit/reload dotfiles ---
   nmap <leader>ez :e ~/.zshrc<CR>
-  nmap <silent> <leader>ev :e $MYVIMRC<CR>
-  nmap <silent> <leader>sv :so $MYVIMRC<CR>
+  nmap <silent> <leader>ev :e /home/angelo/dotfiles/vim/vimrc<CR>
+  nmap <silent> <leader>sv :so /home/angelo/dotfiles/vim/vimrc<CR>
 
 " --- navigation ---
   " scroll wrapped lines naturally

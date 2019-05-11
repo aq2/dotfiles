@@ -9,9 +9,17 @@
   fpath=( "$HOME/.config/zsh" $fpath )
   export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+  # export VIMINIT='source ~/vim/vimrc'
+  #export VIM=/home/angelo/dotfiles/vim
+  #export VIMINIT='source $MYVIMRC'
+  #export MYVIMRC='/home/angelo/vim/vimrc'
+  
+  # gvimrc?
+  #export VIMINIT='source $MYVIMRC'
+  #export MYVIMRC='/home/angelo/dotfiles/vim/vimrc'
 
 # fancy prompt
-  source ~/.config/zsh/plugins/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
+  source ~/.config/zsh/plugins/agkozak-zsh-prompt.plugin.zsh
 
   AGKOZAK_MULTILINE=0
   AGKOZAK_BLANK_LINES=1
@@ -24,7 +32,7 @@
 
   #                          div  beh ahe add del mod ren untr
   # AGKOZAK_CUSTOM_SYMBOLS=( '&*' '&' '*' '+' 'x' '!' '>' '?' )
-  AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '↓' '↑' '+' 'x' '!' '>' '?' )
+  AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '↓' '↑' 'p' 'x' '!' '>' '?' )
 
 
 #   fzf
@@ -71,5 +79,4 @@
   alias upg="apt list --upgradable"
   alias blame='systemd-analyze blame'
   alias glog='git log --pretty="%Cgreen%h  %Cblue%ar%Creset  %s"'
-
 

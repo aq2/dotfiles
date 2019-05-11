@@ -1,20 +1,19 @@
 " → init plug plugin
-  source $HOME/.vim/plug.vimrc
+  source $HOME/dotfiles/vim/plug.vimrc
 
 
 "  general settings
   syntax on
   set backspace=2
   set nocompatible
-  " set signcolumn=no
   colorscheme gravy
   set background=dark
   set ttyfast termguicolors
   set splitbelow splitright
+  set foldmethod=indent foldenable foldlevelstart=1
   set rnu number numberwidth=5
   set laststatus=2 showcmd noshowmode
   set cursorline scrolloff=9 nostartofline
-  set foldmethod=indent foldenable foldlevelstart=1
 
   set encoding=utf-8
   set hidden autoread
@@ -26,22 +25,11 @@
   set linebreak
   set showbreak=˜
   set fillchars=""
-  " set fillchars=vert:\
   set autoindent copyindent
   filetype plugin indent on
   set wrap whichwrap+=<,>,[,]
   set shiftround shiftwidth=2
   set tabstop=2 softtabstop=2 expandtab
-
-  " set list shows whitespace characters if you wanna
-  " set list listchars=tab:‥\ ,trail:˙
-  " set list!
-  " set list listchars=tab:»·\,trail:·
-  " set list listchars=tab:>-,trail:.,extends:>
-  " Enter the middle-dot by pressing Ctrl-k then .M
-  " set listchars=tab:\|_,trail:·
-  " Enter the right-angle-quote by pressing Ctrl-k then >>
-  " set list listchars=tab:»·,trail:·,nbsp:␣
 
   set path+=**
   set gdefault
@@ -62,7 +50,7 @@
     set go=af ghr=0
     set linespace=4
     set mousehide mousemodel=popup mouse=a
-    set guifont=FantasqueSansMono\ Nerd\ Font\ Mono\ 16
+    set guifont=Fantasque\ Sans\ Mono\ 16
   endif
 
 
@@ -74,9 +62,9 @@
 
 
 "  source other vim settings
-  source $HOME/.vim/keys.vimrc
-  source $HOME/.vim/nerd.vimrc
-  source $HOME/.vim/lightline.vimrc
-  source $HOME/.vim/autocommands.vimrc
-  source $HOME/.vim/plugin-settings.vimrc
+  source /home/angelo/dotfiles/vim/keys.vimrc
+  source /home/angelo/dotfiles/vim/nerd.vimrc
+  source /home/angelo/dotfiles/vim/lightline.vimrc
+  source /home/angelo/dotfiles/vim/autocommands.vimrc
+  source /home/angelo/dotfiles/vim/plugin-settings.vimrc
 

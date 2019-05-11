@@ -1,7 +1,9 @@
+tmp
+.zcompdump
+
 plugged/
 session/
-tmp/
 spell/
-vim_mru_files
 NERDTreeBookmarks
 .netrwhist
+vim_mru_files
