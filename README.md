@@ -13,4 +13,7 @@ there are many like it, but this one is mine
 
 
 # dotfiles
-managed by gnu stow
+
+gotta use those symlinks...
+
+~was managed by gnu stow~
