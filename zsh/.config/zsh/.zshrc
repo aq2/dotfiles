@@ -9,15 +9,6 @@
   fpath=( "$HOME/.config/zsh" $fpath )
   export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-  # export VIMINIT='source ~/vim/vimrc'
-  #export VIM=/home/angelo/dotfiles/vim
-  #export VIMINIT='source $MYVIMRC'
-  #export MYVIMRC='/home/angelo/vim/vimrc'
-  
-  # gvimrc?
-  #export VIMINIT='source $MYVIMRC'
-  #export MYVIMRC='/home/angelo/dotfiles/vim/vimrc'
-
 # fancy prompt
   source ~/.config/zsh/plugins/agkozak-zsh-prompt.plugin.zsh
 
@@ -32,7 +23,7 @@
 
   #                          div  beh ahe add del mod ren untr
   # AGKOZAK_CUSTOM_SYMBOLS=( '&*' '&' '*' '+' 'x' '!' '>' '?' )
-  AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '↓' '↑' 'p' 'x' '!' '>' '?' )
+  AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '↓' '↑' '' 'x' '!' '>' '?' )
 
 
 #   fzf
@@ -41,9 +32,9 @@
   fi
 
   export FZF_DEFAULT_OPS="--layout=reverse-list ---layout=reverse --border"
-  export FZF_DEFAULT_COMMAND="find . -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
+  # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-  # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git -L'
+  export FZF_DEFAULT_COMMAND="find . -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
   # export FZF_DEFAULT_COMMAND="find -L"
   # export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
 
