@@ -4,6 +4,7 @@
   export VISUAL=vim
   TERM=xterm-256color
   setopt appendhistory
+  HOSTNAME=$(hostname)
   setxkbmap -option caps:escape
   HISTFILE=~/.config/zsh_history
   fpath=( "$HOME/.config/zsh" $fpath )
@@ -23,7 +24,7 @@
 
   #                          div  beh ahe add del mod ren untr
   # AGKOZAK_CUSTOM_SYMBOLS=( '&*' '&' '*' '+' 'x' '!' '>' '?' )
-  AGKOZAK_CUSTOM_SYMBOLS=( '↕' '↓' '↑' '' 'x' '~' '>' '?' )
+  AGKOZAK_CUSTOM_SYMBOLS=( '↕' '↓' '↑' '' 'x' '~' 'r' '?' )
 
 
 #   fzf
@@ -39,7 +40,7 @@
   # export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
 
   [[ $- == *i* ]] && source "/home/angelo/.config/fzf/shell/completion.zsh" 2> /dev/null
-  # export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
   # misc
   zstyle ':completion:*' menu select
@@ -49,19 +50,16 @@
   source "/home/angelo/.config/zsh/plugins/zsh-z.plugin.zsh"
   source /home/angelo/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
-HOSTNAME=$(hostname)
-
-
-
+  if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+    source /etc/profile.d/vte.sh
+  fi
 
 
   function take() {
     mkdir -p $1
     cd $1
   }
+
 
 #  alias
   alias xx='exit'
@@ -75,12 +73,15 @@ HOSTNAME=$(hostname)
   alias gsta='git status'
   alias gcom='git commit -m'
   alias zeesh='source ~/.zshrc'
-  alias la='ls -Algoha --author'
+  # alias la='ls -Algoha --author'
+  alias la="ls -lha | sed -re 's/^[^ ]* //'"
   alias update="sudo apt update"
   alias upgrade="sudo apt upgrade"
   alias upg="apt list --upgradable"
   alias blame='systemd-analyze blame'
   alias ls='ls --color=auto --group-directories-first'
-  alias ssh='printf "\033]7;file://%s/\007" "mickey"; ssh'
   alias glog='git log --pretty="%Cgreen%h  %Cblue%ar%Creset  %s"'
+
+  " for tilix profile switching, i fink
+  alias ssh='printf "\033]7;file://%s/\007" "mickey"; ssh'
 
