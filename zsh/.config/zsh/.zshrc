@@ -10,6 +10,9 @@
   fpath=( "$HOME/.config/zsh" $fpath )
   export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Report command running time if it is more than 3 seconds
+REPORTTIME=3
+
 # fancy prompt
   source ~/.config/zsh/plugins/agkozak-zsh-prompt.plugin.zsh
 
