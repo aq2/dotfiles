@@ -27,7 +27,7 @@ REPORTTIME=3
 
   #                          div  beh ahe add del mod ren untr
   # AGKOZAK_CUSTOM_SYMBOLS=( '&*' '&' '*' '+' 'x' '!' '>' '?' )
-  AGKOZAK_CUSTOM_SYMBOLS=( '↕' '↓' '↑' '' 'x' '~' 'r' '?' )
+  AGKOZAK_CUSTOM_SYMBOLS=( '↕' '↓' '↑' '+' 'x' '~' 'r' '?' )
 
 
 #   fzf
@@ -85,6 +85,6 @@ REPORTTIME=3
   alias ls='ls --color=auto --group-directories-first'
   alias glog='git log --pretty="%Cgreen%h  %Cblue%ar%Creset  %s"'
 
-  " for tilix profile switching, i fink
+  # for tilix profile switching, i fink
   alias ssh='printf "\033]7;file://%s/\007" "mickey"; ssh'
 
