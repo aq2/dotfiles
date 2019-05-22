@@ -111,23 +111,19 @@ prompt_pure_preprompt_render() {
 
 	# Set the path.
 	preprompt_parts+=('%F{blue}%~%f')
-	TRPROMPT='%F{blue}%~%f'
 
   # add greg's bits
-  # preprompt_parts+='%b%F{yellow}%B%(1j.*.)%(?..!)'
-  TRPROMPT+='%b%F{yellow}%B%(1j.*.)%(?..!)'
+  preprompt_parts+='%b%F{yellow}%B%(1j.*.)%(?..!)'
 
 
 	# Add git branch and dirty status info.
 	typeset -gA prompt_pure_vcs_info
 	if [[ -n $prompt_pure_vcs_info[branch] ]]; then
-		# preprompt_parts+=("%F{$git_color}"'${prompt_pure_vcs_info[branch]}${prompt_pure_git_dirty}%f')
-		TRPROMPT+="%F{$git_color}"'${prompt_pure_vcs_info[branch]}${prompt_pure_git_dirty}%f'
+		preprompt_parts+=("%F{$git_color}"'${prompt_pure_vcs_info[branch]}${prompt_pure_git_dirty}%f')
 	fi
 	# Git pull/push arrows.
 	if [[ -n $prompt_pure_git_arrows ]]; then
-		# preprompt_parts+=('%F{cyan}${prompt_pure_git_arrows}%f')
-		TRPROMPT+='%F{cyan}${prompt_pure_git_arrows}%f'
+		preprompt_parts+=('%F{cyan}${prompt_pure_git_arrows}%f')
 	fi
 
 	# Username and machine, if applicable.
@@ -135,7 +131,6 @@ prompt_pure_preprompt_render() {
 	# Execution time.
 	[[ -n $prompt_pure_cmd_exec_time ]] && preprompt_parts+=('%F{yellow}${prompt_pure_cmd_exec_time}%f')
 
-  RPROMPT=$TRPROMPT
 	local cleaned_ps1=$PROMPT
 	local -H MATCH MBEGIN MEND
 	if [[ $PROMPT = *$prompt_newline* ]]; then
@@ -145,7 +140,6 @@ prompt_pure_preprompt_render() {
 	fi
 	unset MATCH MBEGIN MEND
 
-  RPROMPT=$TRPROMPT
 	# Construct the new prompt with a clean preprompt.
 	local -ah ps1
 	ps1=(
@@ -155,40 +149,21 @@ prompt_pure_preprompt_render() {
 	)
 
 	PROMPT="${(j..)ps1}"
-  RPROMPT=$TRPROMPT
 
-  # echo 'bob'.$RPROMPT
 	# Expand the prompt for future comparision.
 	local expanded_prompt
 	expanded_prompt="${(S%%)PROMPT}"
 
-  RPROMPT=$TRPROMPT
 	if [[ $1 == precmd ]]; then
 		# Initial newline, for spaciousness.
 		print
-  RPROMPT=$TRPROMPT
 	elif [[ $prompt_pure_last_prompt != $expanded_prompt ]]; then
 		# Redraw the prompt.
 		zle && zle .reset-prompt
-    RPROMPT=$TRPROMPT
 	fi
 
-  # from github issues, but no workee
-  # preprompt_parts+=($(custom_prompt_parts 2>/dev/null))
-
-  RPROMPT=$TRPROMPT
-  # RPROMPT='bob'.$TRPROMPT
 	typeset -g prompt_pure_last_prompt=$expanded_prompt
-  RPROMPT=$TRPROMPT
-  
-  add-zsh-hook precmd aq_prompt
 }
-
-
-aq_prompt() {
-  RPROMPT=$TRPROMPT
-}
-
 
 prompt_pure_precmd() {
 	# check exec time and store it in a variable
@@ -201,7 +176,6 @@ prompt_pure_precmd() {
 	# preform async git dirty check and fetch
 	prompt_pure_async_tasks
 
-  RPROMPT=$TRPROMPT
 	# Check if we should display the virtual env, we use a sufficiently high
 	# index of psvar (12) here to avoid collisions with user defined entries.
 	psvar[12]=
@@ -220,10 +194,7 @@ prompt_pure_precmd() {
 	prompt_pure_reset_prompt_symbol
 
 	# print the preprompt
-	RPROMPT=$TRPROMPT
 	prompt_pure_preprompt_render "precmd"
-  RPROMPT=$TRPROMPT
-  add-zsh-hook precmd aq_prompt
 }
 
 prompt_pure_async_git_aliases() {
@@ -267,14 +238,12 @@ prompt_pure_async_vcs_info() {
 	info[branch]=$vcs_info_msg_0_
 
 	print -r - ${(@kvq)info}
-  add-zsh-hook precmd aq_prompt
 }
 
 # fastest possible way to check if repo is dirty
 prompt_pure_async_git_dirty() {
 	setopt localoptions noshwordsplit
 	local untracked_dirty=$1
-  add-zsh-hook precmd aq_prompt
 
 	if [[ $untracked_dirty = 0 ]]; then
 		command git diff --no-ext-diff --quiet --exit-code
@@ -368,7 +337,6 @@ prompt_pure_async_tasks() {
 	[[ -n $prompt_pure_vcs_info[top] ]] || return
 
 	prompt_pure_async_refresh
-  add-zsh-hook precmd aq_prompt
 }
 
 prompt_pure_async_refresh() {
@@ -397,7 +365,7 @@ prompt_pure_async_refresh() {
 		async_job "prompt_pure" prompt_pure_async_git_dirty ${PURE_GIT_UNTRACKED_DIRTY:-1}
 	fi
 }
-
+# ↑↓ ❮ ❯ ❰ ❱ 
 prompt_pure_check_git_arrows() {
 	setopt localoptions noshwordsplit
 	local arrows left=${1:-0} right=${2:-0}
@@ -467,7 +435,7 @@ prompt_pure_async_callback() {
 			if (( code == 0 )); then
 				unset prompt_pure_git_dirty
 			else
-				typeset -g prompt_pure_git_dirty="%b%F{yellow} ●"
+				typeset -g prompt_pure_git_dirty="*"
 			fi
 
 			[[ $prev_dirty != $prompt_pure_git_dirty ]] && do_render=1
@@ -578,24 +546,22 @@ prompt_pure_state_setup() {
 		username "$username"
 		prompt	 "${PURE_PROMPT_SYMBOL:-❯}"
 	)
-  RPROMPT=$TRPROMPT
 }
 
 prompt_pure_setup() {
 	# Prevent percentage showing up if output doesn't end with a newline.
 	export PROMPT_EOL_MARK=''
 
-  RPROMPT=$TRPROMPT
 	prompt_opts=(subst percent)
 
 	# borrowed from promptinit, sets the prompt options in case pure was not
 	# initialized via promptinit.
 	setopt noprompt{bang,cr,percent,subst} "prompt${^prompt_opts[@]}"
 
-	# if [[ -z $prompt_newline ]]; then
-	# 	# This variable needs to be set, usually set by promptinit.
-	# 	typeset -g prompt_newline=$'\n%{\r%}'
-	# fi
+	if [[ -z $prompt_newline ]]; then
+		# This variable needs to be set, usually set by promptinit.
+		typeset -g prompt_newline=$'\n%{\r%}'
+	fi
 
 	zmodload zsh/datetime
 	zmodload zsh/zle
@@ -612,10 +578,8 @@ prompt_pure_setup() {
 	add-zsh-hook precmd prompt_pure_precmd
 	add-zsh-hook preexec prompt_pure_preexec
 
-  RPROMPT=$TRPROMPT
 	prompt_pure_state_setup
 
-  RPROMPT=$TRPROMPT
 	zle -N prompt_pure_update_vim_prompt_widget
 	zle -N prompt_pure_reset_vim_prompt_widget
 	if (( $+functions[add-zle-hook-widget] )); then
@@ -626,12 +590,8 @@ prompt_pure_setup() {
 	# if a virtualenv is activated, display it in grey
 	PROMPT='%(12V.%F{242}%12v%f .)'
 
-  RPROMPT=$TRPROMPT
 	# prompt turns red if the previous command didn't exit with 0
 	PROMPT+='%(?.%F{magenta}.%F{red})${prompt_pure_state[prompt]}%f '
-
-  RPROMPT=$TRPROMPT
-
 
 	# Store prompt expansion symbols for in-place expansion via (%). For
 	# some reason it does not work without storing them in a variable first.
@@ -659,9 +619,9 @@ prompt_pure_setup() {
 	# Improve the debug prompt (PS4), show depth by repeating the +-sign and
 	# add colors to highlight essential parts like file and function name.
 	PROMPT4="${ps4_parts[depth]} ${ps4_symbols}${ps4_parts[prompt]}"
-  RPROMPT=$TRPROMPT
+
+	unset ZSH_THEME  # Guard against Oh My Zsh themes overriding Pure.
 }
 
-  RPROMPT=$TRPROMPT
 prompt_pure_setup "$@"
 

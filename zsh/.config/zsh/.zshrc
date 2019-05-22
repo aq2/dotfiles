@@ -14,7 +14,7 @@
   export NVIM_GTK_PREFER_DARK_THEME=1
   export NVIM_GTK_NO_WINDOW_DECORATION=1
 
-    source ~/.config/zsh/vincent.zsh
+    # source ~/.config/zsh/vincent.zsh
   
   
   # Report command running time if it is more than 3 seconds

@@ -180,15 +180,8 @@ prompt_pure_preprompt_render() {
   # RPROMPT='bob'.$TRPROMPT
 	typeset -g prompt_pure_last_prompt=$expanded_prompt
   RPROMPT=$TRPROMPT
-  
-  add-zsh-hook precmd aq_prompt
+
 }
-
-
-aq_prompt() {
-  RPROMPT=$TRPROMPT
-}
-
 
 prompt_pure_precmd() {
 	# check exec time and store it in a variable
@@ -223,7 +216,6 @@ prompt_pure_precmd() {
 	RPROMPT=$TRPROMPT
 	prompt_pure_preprompt_render "precmd"
   RPROMPT=$TRPROMPT
-  add-zsh-hook precmd aq_prompt
 }
 
 prompt_pure_async_git_aliases() {
@@ -267,14 +259,12 @@ prompt_pure_async_vcs_info() {
 	info[branch]=$vcs_info_msg_0_
 
 	print -r - ${(@kvq)info}
-  add-zsh-hook precmd aq_prompt
 }
 
 # fastest possible way to check if repo is dirty
 prompt_pure_async_git_dirty() {
 	setopt localoptions noshwordsplit
 	local untracked_dirty=$1
-  add-zsh-hook precmd aq_prompt
 
 	if [[ $untracked_dirty = 0 ]]; then
 		command git diff --no-ext-diff --quiet --exit-code
@@ -368,7 +358,6 @@ prompt_pure_async_tasks() {
 	[[ -n $prompt_pure_vcs_info[top] ]] || return
 
 	prompt_pure_async_refresh
-  add-zsh-hook precmd aq_prompt
 }
 
 prompt_pure_async_refresh() {
