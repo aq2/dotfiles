@@ -60,9 +60,9 @@
   source "/home/angelo/.config/zsh/plugins/zsh-z.plugin.zsh"
   source /home/angelo/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-  # if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-    # source /etc/profile.d/vte.sh
-  # fi
+  if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+    source /etc/profile.d/vte.sh
+  fi
 
 
   function take() {
@@ -98,16 +98,17 @@
 
 autoload -U promptinit && promptinit
 
-prompt pure
-
-
+  prompt pure
+  prompt_newline='%666v'
+  PROMPT="$PROMPT"
 
 # necessary?
   # autoload -U colors
   # colors
-  # setopt prompt_subst
+  setopt prompt_subst
 
 # # left prompt
+
 # # *** PROMPT FORMATTING ***
 
 # # Echoes a username/host string when connected over SSH (empty otherwise)
