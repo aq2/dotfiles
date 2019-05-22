@@ -109,23 +109,23 @@ prompt_pure_preprompt_render() {
 	# Initialize the preprompt array.
 	local -a preprompt_parts
 
-  RPROMPT=''
-	
 	# Set the path.
 	preprompt_parts+=('%F{blue}%1~%f')
-  # add greg's bits
-  # preprompt_parts+='%b%F{yellow}%B%(1j.*.)%(?..!)'
+
+  # init and add greg's bits
+  RPROMPT=''
   RPROMPT+=' %b%F{red}%B%(1j.*.)%(?..!)'
 
+  " check process time
 	[[ -n $prompt_pure_cmd_exec_time ]] && RPROMPT+='%F{yellow}${prompt_pure_cmd_exec_time}%f  '
 
   # Add git branch and dirty status info.
 	typeset -gA prompt_pure_vcs_info
 	if [[ -n $prompt_pure_vcs_info[branch] ]]; then
-		preprompt_parts+=("%F{$git_color}"'${prompt_pure_git_dirty}%f')
 		RPROMPT+='%F{green}${prompt_pure_vcs_info[branch]}%f '
-		# preprompt_parts+=("%F{$git_color}"'${prompt_pure_vcs_info[branch]}${prompt_pure_git_dirty}%f')
+		preprompt_parts+=("%F{$git_color}"'${prompt_pure_git_dirty}%f')
 	fi
+
 	# Git pull/push arrows.
 	if [[ -n $prompt_pure_git_arrows ]]; then
 		preprompt_parts+=('%F{cyan}${prompt_pure_git_arrows}%f')
@@ -154,8 +154,9 @@ prompt_pure_preprompt_render() {
 	)
 
 	PROMPT="${(j..)ps1}"
-  # RPROMPT=$preprompt_parts
+  # add full file path and system time
   RPROMPT+=' %F{blue}%~%f  %F{white}%*'
+
 	# Expand the prompt for future comparision.
 	local expanded_prompt
 	expanded_prompt="${(S%%)PROMPT}"
