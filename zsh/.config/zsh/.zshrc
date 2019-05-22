@@ -14,6 +14,10 @@
   export NVIM_GTK_PREFER_DARK_THEME=1
   export NVIM_GTK_NO_WINDOW_DECORATION=1
 
+autoload -U promptinit
+fpath+=/home/angelo/dotfiles/zsh/.config/zsh/plugins/zsh-clean
+promptinit
+prompt clean
     # source ~/.config/zsh/vincent.zsh
   
   
@@ -34,7 +38,7 @@
 
   #                          div  beh ahe add del mod ren untr
   # AGKOZAK_CUSTOM_SYMBOLS=( '&*' '&' '*' '+' 'x' '!' '>' '?' )
-  AGKOZAK_CUSTOM_SYMBOLS=( '↕' '↓' '↑' '+' 'x' '~' 'r' '?' )
+  # AGKOZAK_CUSTOM_SYMBOLS=( '↕' '↓' '↑' '+' 'x' '~' 'r' '?' )
 
 
 #   fzf
@@ -53,8 +57,8 @@
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
   # misc
-  zstyle ':completion:*' menu select
-  autoload -U compinit && compinit -d ~/.config/zsh/tmp/zcompdump
+  # zstyle ':completion:*' menu select
+  # autoload -U compinit && compinit -d ~/.config/zsh/zcompdump
 
   source "/home/angelo/.config/fzf/shell/key-bindings.zsh"
   source "/home/angelo/.config/zsh/plugins/zsh-z.plugin.zsh"
@@ -96,11 +100,47 @@
   alias ssh='printf "\033]7;file://%s/\007" "mickey"; ssh'
 
 
+<<<<<<< HEAD
 autoload -U promptinit && promptinit
 
   prompt pure
   prompt_newline='%666v'
   PROMPT="$PROMPT"
+=======
+
+## Checking vcs
+# Global vcs_info
+# Check if there are modifications and staged changes
+zstyle ':vcs_info:*' get-revision true
+# Clean only
+# Check for untracked files
+zstyle ':vcs_info:*' check-for-untracked true
+# Check for prompt arrows up and down
+zstyle ':vcs_info:*' check-head true
+
+## Symbols
+# Modified sym
+zstyle ':vcs_info:*' unstagedstr '*'
+# Staged sym
+zstyle ':vcs_info:*' stagedstr '+'
+# Untracked sym
+zstyle ':vcs_info:*:clean:*' untrackedstr '.'
+# Your head is behind remote
+zstyle ':vcs_info:*:clean:*' headbehindstr '⇣'
+# Your head is ahead remote
+zstyle ':vcs_info:*:clean:*' headaheadstr '⇡'
+# Prompt symbol
+zstyle ':clean:normal:*' prompt-symbol '❯'
+# Prompt symbol as root user
+zstyle ':clean:root:*' prompt-symbol '#'
+
+# Note that the * can be replaced with the vcs
+# Example these are the symbols that will be used in a git repo
+zstyle ':vcs_info:git:*' unstagedstr 'G*'
+zstyle ':vcs_info:git:*' stagedstr 'G+'
+zstyle ':vcs_info:git:clean:*' untrackedstr 'G.'
+# only works with the vcs_info ones matching :vcs_info:svn:context:-all-
+>>>>>>> 4b2c57dad0329fc921eb941c4aa8838424e2eec8
 
 # necessary?
   # autoload -U colors
