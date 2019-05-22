@@ -108,24 +108,22 @@ prompt_pure_preprompt_render() {
 
 	# Initialize the preprompt array.
 	local -a preprompt_parts
-
 	# Set the path.
+  RPROMPT=''
 	preprompt_parts+=('%F{blue}%1~%f')
 
-  # init and add greg's bits
-  RPROMPT=''
-  RPROMPT+=' %b%F{red}%B%(1j.*.)%(?..!)'
+  # add greg's bits
+  RPROMPT+=' %b%F{red}%B%(1j.*.)%(?..!) '
 
-  " check process time
+	# Execution time.
 	[[ -n $prompt_pure_cmd_exec_time ]] && RPROMPT+='%F{yellow}${prompt_pure_cmd_exec_time}%f  '
 
   # Add git branch and dirty status info.
 	typeset -gA prompt_pure_vcs_info
 	if [[ -n $prompt_pure_vcs_info[branch] ]]; then
-		RPROMPT+='%F{green}${prompt_pure_vcs_info[branch]}%f '
 		preprompt_parts+=("%F{$git_color}"'${prompt_pure_git_dirty}%f')
+		RPROMPT+='%F{green}${prompt_pure_vcs_info[branch]}%f '
 	fi
-
 	# Git pull/push arrows.
 	if [[ -n $prompt_pure_git_arrows ]]; then
 		preprompt_parts+=('%F{cyan}${prompt_pure_git_arrows}%f')
@@ -133,8 +131,6 @@ prompt_pure_preprompt_render() {
 
 	# Username and machine, if applicable.
 	[[ -n $prompt_pure_state[username] ]] && preprompt_parts+=('${prompt_pure_state[username]}')
-	# Execution time.
-	# [[ -n $prompt_pure_cmd_exec_time ]] && preprompt_parts+=('%F{yellow}${prompt_pure_cmd_exec_time}%f')
 
 	local cleaned_ps1=$PROMPT
 	local -H MATCH MBEGIN MEND
@@ -154,9 +150,7 @@ prompt_pure_preprompt_render() {
 	)
 
 	PROMPT="${(j..)ps1}"
-  # add full file path and system time
   RPROMPT+=' %F{blue}%~%f  %F{white}%*'
-
 	# Expand the prompt for future comparision.
 	local expanded_prompt
 	expanded_prompt="${(S%%)PROMPT}"

@@ -57,20 +57,19 @@
   alias gsta='git status'
   alias gcom='git commit -m'
   alias zeesh='source ~/.zshrc'
-  # alias la='ls -Algoha --author'
-  alias la="ls -lha | sed -re 's/^[^ ]* //'"
   alias update="sudo apt update"
   alias upgrade="sudo apt upgrade"
   alias upg="apt list --upgradable"
   alias blame='systemd-analyze blame'
+  alias la="ls -lha | sed -re 's/^[^ ]* //'"
   alias ls='ls --color=auto --group-directories-first'
   alias glog='git log --pretty="%Cgreen%h  %Cblue%ar%Creset  %s"'
 
-
+#  hacked pure prompt
   autoload -U promptinit && promptinit
   prompt pure
   prompt_newline='%666v'
   PROMPT="$PROMPT"
 
-  setopt prompt_subst
+  # setopt prompt_subst
 
