@@ -21,14 +21,14 @@
   fi
 
   export FZF_DEFAULT_OPS="--layout=reverse-list ---layout=reverse --border"
-  # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
   export FZF_DEFAULT_COMMAND="find . -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
   # export FZF_DEFAULT_COMMAND="find -L"
+  # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
   # export FZF_DEFAULT_COMMAND="find . -path '*/\.*' -type d -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
   [[ $- == *i* ]] && source "/home/angelo/.config/fzf/shell/completion.zsh" 2> /dev/null
-  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
   # misc
   zstyle ':completion:*' menu select
@@ -61,9 +61,11 @@
   alias upgrade="sudo apt upgrade"
   alias upg="apt list --upgradable"
   alias blame='systemd-analyze blame'
+  alias gvim='gvim --remote-tab-silent'
   alias la="ls -lha | sed -re 's/^[^ ]* //'"
   alias ls='ls --color=auto --group-directories-first'
   alias glog='git log --pretty="%Cgreen%h  %Cblue%ar%Creset  %s"'
+
 
 #  hacked pure prompt
   autoload -U promptinit && promptinit
@@ -71,5 +73,18 @@
   prompt_newline='%666v'
   PROMPT="$PROMPT"
 
-  # setopt prompt_subst
+
+# Options
+
+  setopt AUTO_CD                 # [default] .. is shortcut for cd .. (etc)
+  setopt AUTO_PUSHD              # [default] cd automatically pushes old dir onto dir stack
+  setopt CORRECT                 # [default] command auto-correction
+  setopt CORRECT_ALL             # [default] argument auto-correction
+  setopt NO_FLOW_CONTROL         # disable start (C-s) and stop (C-q) characters
+  setopt HIST_IGNORE_SPACE       # [default] don't record commands starting with a space
+  setopt IGNORE_EOF              # [default] prevent accidental C-d from exiting shell
+  setopt LIST_PACKED             # make completion lists more densely packed
+  setopt MENU_COMPLETE           # auto-insert first possible ambiguous completion
+  setopt NO_NOMATCH              # [default] unmatched patterns are left unchanged
+  setopt PRINT_EXIT_VALUE        # [default] for non-zero exit status
 

@@ -434,8 +434,8 @@ prompt_pure_async_callback() {
 		prompt_pure_async_git_dirty)
 			local prev_dirty=$prompt_pure_git_dirty
 			if (( code == 0 )); then
-				# unset prompt_pure_git_dirty
-				typeset -g prompt_pure_git_dirty="%b%F{blue}● "
+				unset prompt_pure_git_dirty
+				# typeset -g prompt_pure_git_dirty="%b%F{blue}● "
 			else
 				typeset -g prompt_pure_git_dirty="%b%F{yellow}● "
 			fi
