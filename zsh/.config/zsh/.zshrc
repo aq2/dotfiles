@@ -66,10 +66,11 @@
   alias ls='ls --color=auto --group-directories-first'
   alias glog='git log --pretty="%Cgreen%h  %Cblue%ar%Creset  %s"'
 
+  alias unison-now='unison -auto -batch -silent /home/angelo/sync ssh://syncuser@drip//home/angelo/sync'
 
 #  hacked pure prompt
   autoload -U promptinit && promptinit
-  prompt pure
+  prompt impure
   prompt_newline='%666v'
   PROMPT="$PROMPT"
 
@@ -88,3 +89,17 @@
   setopt NO_NOMATCH              # [default] unmatched patterns are left unchanged
   setopt PRINT_EXIT_VALUE        # [default] for non-zero exit status
 
+color-ssh() {
+    trap "colorterm.sh" INT EXIT
+    if [[ "$*" =~ "mickey" ]]; then
+        colorterm.sh mickey
+    elif [[ "$*" =~ "drip" ]]; then
+        colorterm.sh drip
+    else
+        colorterm.sh foo
+    fi
+    ssh $*
+}
+
+compdef _ssh color-ssh=ssh
+alias ssh=color-ssh
